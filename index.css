@@ -1,0 +1,63 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #212529;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'SF Pro Display', monospace;
+    color: #f8f9fa;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    font-size: xxx-large;
+}
+
+h1:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+    opacity: 0.6;
+}
+
+a {
+    font-family: 'SF Pro Display', monospace;
+    color: #f8f9fa;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    font-size: xxx-large;
+}
+
+a:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+    opacity: 0.6;
+}
+
+#blob {
+    background: linear-gradient(
+            to right,
+            mediumpurple,
+             white
+            );
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+    opacity: 0.3
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
