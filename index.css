@@ -1,63 +1,99 @@
-body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: #212529;
-    margin: 0rem;
-    overflow: hidden;
+@font-face {
+    font-family: 'SF-Pro-Rounded';
+    src: url('../fonts/SF-Pro-Rounded-Regular.otf') format('otf');
 }
 
-h1 {
-    font-family: 'SF Pro Display', monospace;
-    color: #f8f9fa;
-    padding: 0rem clamp(1rem, 2vw, 3rem);
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    font-size: xxx-large;
-}
-
-h1:hover {
-    background-color: #f8f9fa;
-    color: #212529;
-    opacity: 0.6;
-}
-
-a {
-    font-family: 'SF Pro Display', monospace;
-    color: #f8f9fa;
-    padding: 0rem clamp(1rem, 2vw, 3rem);
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    font-size: xxx-large;
-}
-
-a:hover {
-    background-color: #f8f9fa;
-    color: #212529;
-    opacity: 0.6;
-}
-
-#blob {
-    background: linear-gradient(
-            to right,
-            mediumpurple,
-             white
-            );
-    position: absolute;
-    height: 300px;
-    aspect-ratio: 1;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    animation: rotate 20s infinite;
-    opacity: 0.3
-}
-
-@keyframes rotate {
-    from {
-        rotate: 0deg;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #F5F5F7;
+        --background: #00000;
+        --accent: #3943B7;
+        --wheels: #3E2F5B;
+        --alwaysart: #F5F5F7;
+        --pink: #E0607E;
     }
+}
 
-    to {
-        rotate: 360deg;
+:root {
+    --text: #00000;
+    --background: #F5F5F7;
+    --accent: #3943B7;
+    --wheels: #3E2F5B;
+    --alwaysart: #131B20;
+    --pink: #E0607E;
+}
+
+
+
+body {
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'SF-Pro-Rounded', sans-serif;
+    gap: 16px;
+}
+
+#profile {
+    width: 50vh;
+}
+
+#about {
+    padding: 16px 16px 16px 16px;
+    background: var(--background);
+    border-radius: 20px;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about img {
+    width: 210px;
+    height: 214.75px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Clips the image to the border-radius */
+    border: 5px solid var(--accent); /* Black outline */
+    justify-content: center;
+    align-items: center;
+}
+
+#contact {
+    display: flex;
+    padding-top: 16px;
+}
+
+#contact img {
+    width: 64px;
+    height: 54.4px;
+    background: var(--background);
+    padding: 16px;
+    border-radius: 12px;
+    margin-right: 8px;
+}
+
+#contact #email {
+    display: grid;
+    background: var(--accent);
+    flex-grow: 1;
+    text-align: center;
+    place-items: center;
+    color: var(--background);
+    border-radius: 12px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+#work {
+    h1 {
+        color: var(--accent);
+
+    }
+}
+
+#projects {
+    h1 {
+        color: var(--pink);
     }
 }
