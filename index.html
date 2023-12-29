@@ -6,48 +6,133 @@
         <script async src="index.js"></script>
     </head>
     <body>
-        <div id="profile">
-            <div id="about">
-                <div id="heading">
-                      <image src="./images/profile.jpeg" id="icon"></image>
-                      <h1>👋 Hi, I’m Trevor</h1>
+        <div class="grid-container">
+            <div id="profile">
+                <div id="about">
+                    <div id="heading">
+                          <image src="./images/profile.jpeg" id="icon"></image>
+                          <h1>👋 Hi, I’m Trevor</h1>
+                    </div>
+
+                    <p id="text">
+                    I’m studying software engineering at McGill University in Montreal.
+                    I’ve worked with a variety of languages and platforms over the past few years, but my passion is iOS app development.
+                    My focus is always on the user experience and not just about writing good code.
+                    <br></br>
+                    Currently, I’m working on a skateboard tracking app called Wheels. It takes advantage of a lot of very good Apple frameworks like location, sharing, and activities.
+                    It’s been a fun project and one that I use quite often when I ride.
+                    <br></br>
+                    I’m also part of the Rocket Team at McGill, where I’ve worked on GPS systems and I2C & UART communications.
+                    It’s taught me a lot about embedded programming, and I’m looking forward to learning more.
+                    <br></br>
+                    If you have any questions about my work, or want to see if we can work together, you can send me an email of find me on LinkedIn.
+                    I’m on Mastodon too, if that’s your thing. All my open source code is on GitHub if you want to take a look.
+                    I’m always open to new projects and ideas!
+                    </p>
                 </div>
 
-                <p id="text">
-                I’m studying software engineering at McGill University in Montreal.
-                I’ve worked with a variety of languages and platforms over the past few years, but my passion is iOS app development.
-                My focus is always on the user experience and not just about writing good code.
-                <br></br>
-                Currently, I’m working on a skateboard tracking app called Wheels. It takes advantage of a lot of very good Apple frameworks like location, sharing, and activities.
-                It’s been a fun project and one that I use quite often when I ride.
-                <br></br>
-                I’m also part of the Rocket Team at McGill, where I’ve worked on GPS systems and I2C & UART communications.
-                It’s taught me a lot about embedded programming, and I’m looking forward to learning more.
-                <br></br>
-                If you have any questions about my work, or want to see if we can work together, you can send me an email of find me on LinkedIn.
-                I’m on Mastodon too, if that’s your thing. All my open source code is on GitHub if you want to take a look.
-                I’m always open to new projects and ideas!
-                </p>
+                <div id="contact">
+                    <a href="https://github.com/trevorpiltch"><image src="./images/github.png"></image></a>
+                    <a href="https://www.linkedin.com/in/trevor-piltch-41276a26a/"><image src="./images/linkedin.png"></image></a>
+                    <a href="https://mastodon.social/@clizby"><image src="./images/mastodon.svg"></image></a>
+                    <a href="mailto:trevor@piltch.com" id="email">trevor@piltch.com</a>
+                </div>
             </div>
 
-            <div id="contact">
-                <a href="https://github.com/trevorpiltch"><image src="./images/github.png"></image></a>
-                <a href="https://www.linkedin.com/in/trevor-piltch-41276a26a/"><image src="./images/linkedin.png"></image></a>
-                <a href=""><image src="./images/mastodon.svg"></image></a>
-                <a href="mailto:trevor@piltch.com" id="email">trevor@piltch.com</a>
+            <div id="work">
+                <h1>Work</h1>
+
+                <div id="wheels">
+                    <div id="header">
+                        <image src="./images/wheels.png"></image>
+                        <h2>Wheels</h2>
+                    </div>
+                    <div id="content">
+                         <div id="text">
+                            <p>
+                                Wheels is a skateboard ride tracker that tracks your history of riding.
+                                When you’re riding, you can see all your stats (speed, distance, duration).
+                                You can save your skateboard collection, including cruisers, longboards, and electric boards.
+                                You can join a group ride with others and view your riding status on the home screen with
+                                widgets and live activities.
+                            </p>
+                        </div>
+                        <div id="about">
+                            <p>
+                                <strong>Company:</strong> Self <br>
+                                <strong>Platforms:</strong> iOS, WatchOS <br>
+                                <strong>Role:</strong> Sole Developer/Designer <br>
+                                <strong>Year:</strong> 2022-Present <br>
+                                <strong>Links: </strong><a href="">App Store</a>, <a href="https://wheels.trevorpiltch.com/">Website</a> <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="alwaysart">
+                    <div id="header">
+                        <image src="./images/alwaysart.png"></image>
+                        <h2>AlwaysArt</h2>
+                    </div>
+                    <div id="content">
+                        <div id="text">
+                            <p>
+                                AlwaysArt is a startup looking to connect artists, galleries, and collectors.
+                                I’ve been working on an iOS app to help manage inventory that includes server connections, QR scanning, and authentication.
+                                The app has plans to be released to the public but it’s currently only available to AlwaysArt employees.
+                            </p>
+                        </div>
+                        <div id="about">
+                            <p>
+                                <strong>Company:</strong> AlwaysArt<br>
+                                <strong>Platforms:</strong> iOS<br>
+                                <strong>Role:</strong> Junior Developer<br>
+                                <strong>Year:</strong> 2022-Present<br>
+                                <strong>Links:</strong> <a href="https://www.alwaysart.com/">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div id="work">
-            <h1>Work</h1>
+            <div id="Projects">
+                <h1>Projects</h1>
 
-            <div id="wheels">
-                
+                <div class="project" id="grovers">
+                    <h3>Grover's Algorithm</h3>
+                    <p>
+                        A python project and short explainer for Grover’s quantum sorting algorithm.
+                        Built from Qiskit and a Carnegie Mellon lecture paper.
+                    </p>
+                    <p>
+                        <strong>Created for:</strong> School<br>
+                        <strong>Platform:</strong> Command line<br>
+                        <strong>Role:</strong>Sole developer<br>
+                        <strong>Links: </strong><a href="https://github.com/trevorpiltch/Grovers-Algorithm">Repo</a>
+                    </p>
+                </div>
+
+                <div class="project" id="huffman">
+                    <h3>Huffman Encoding</h3>
+                    <p>
+                        A Java project created for school that implements Huffman encoding for a given string.
+                        This was one of my first big projects, so it’s not the most efficient implementation but it was a
+                        fun project and I learned a lot about compression algorithms.
+                    </p>
+                    <p>
+                        <strong>Created for:</strong> School<br>
+                        <strong>Platform:</strong> Command line<br>
+                        <strong>Role:</strong>Lead developer<br>
+                        <strong>Links: </strong><a href="https://github.com/trevorpiltch/CSC505-Final-Project">Repo</a>
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div id="Projects">
-            <h1>Projects</h1>
+
+
+            <footer id="footer">
+                <p id="motto">Made by Trevor, with caffeine.</p>
+            </footer>
         </div>
     </body>
 </html>
