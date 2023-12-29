@@ -223,6 +223,10 @@ body {
         grid-template-columns: 1fr 1fr;
         grid-gap: 16px;
     }
+
+    #footer {
+        padding-bottom: 8px;
+    }
 }
 
  @media only screen and (max-width: 1000px) {
@@ -230,5 +234,6 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 16px;
+        font-size: 22px;
     }
 }
