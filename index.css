@@ -55,6 +55,7 @@ body {
 #contact {
     display: flex;
     padding-top: 16px;
+    margin-bottom: 88px;
 }
 
 #contact img {
