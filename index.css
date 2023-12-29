@@ -234,6 +234,6 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 16px;
-        font-size: 22px;
+        font-size: 30px;
     }
 }
