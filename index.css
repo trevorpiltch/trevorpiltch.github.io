@@ -209,7 +209,6 @@ body {
 }
 
 #footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: 44px;
@@ -234,6 +233,6 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 16px;
-        font-size: 30px;
+        font-size: 32px;
     }
 }
