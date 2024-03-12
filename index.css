@@ -1,239 +1,102 @@
 @font-face {
-    font-family: 'SF-Pro-Rounded';
-    src: url('./fonts/SF-Pro-Rounded-Regular.otf') format('otf2');
+    font-family: 'CaskaydiaCove Nerd Font';
+    src: url('./Caskaydia-Cove-Nerd Fon-Complete-Regular.otf') format('otf2');
+}
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('./SF-Pro-Rounded-Regular.otf') format('otf2');
 }
 
 :root {
-    --text: #F5F5F7;
-    --background: #1E1E1E;
-    --accent: #3943B7;
-    --wheels: #3E2F5B;
-    --alwaysart: #F5F5F7;
-    --pink: #E0607E;
-    --page: #000000;
+    --text: #DADADB;
+    --background: #1D1E20;
+    --accent: #6364FF;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    grid-gap: 16px;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'SF-Pro-Rounded', sans-serif;
-    gap: 16px;
-    background: var(--page);
+    font-family: 'SF Pro Rounded', monospace;
+    background-color: var(--background);
     color: var(--text);
 }
 
-#profile {
-    width: 50vh;
+a:visited {
+    color: var(--text);
 }
 
-#about {
-    padding: 16px 16px 16px 16px;
-    background: var(--background);
-    border-radius: 20px;
-}
-
-#heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#heading img {
-    width: 210px;
-    height: 214.75px;
-    border-radius: 50%; /* Makes the image circular */
-    overflow: hidden; /* Clips the image to the border-radius */
-    border: 5px solid var(--accent); /* Black outline */
-    justify-content: center;
-    align-items: center;
-}
-
-#contact {
-    display: flex;
-    padding-top: 16px;
-    margin-bottom: 88px;
-}
-
-#contact img {
-    width: 64px;
-    height: 54.4px;
-    background: var(--background);
-    padding: 16px;
-    border-radius: 12px;
-    margin-right: 8px;
-}
-
-#contact #email {
-    display: grid;
-    background: var(--accent);
-    flex-grow: 1;
-    text-align: center;
-    place-items: center;
-    color: var(--background);
-    border-radius: 12px;
+a {
+    color: var(--text);
     text-decoration: none;
-    padding: 8px;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 2*100px);
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+#content {
+    margin: 0px 180px 0px 180px;
+    line-height: 1.5rem;
+
+    p {
+        text-indent: 50px;
+    }
+}
+
+#about::before, #work::before, #labs::before, #words::before {
+    content: "";
+    display: block;
+    height: 80px;
+    /* Adjust based on the height of your header */
+    margin-top: -80px;
+    /* Should be the same as height */
+    visibility: hidden;
 }
 
 #work {
-    h1 {
-        color: var(--accent);
-    }
-
-    #wheels {
-        background: var(--background);
-        padding: 16px;
-        border-radius: 20px;
-
-        #header {
-            display: flex;
-            align-items: center;
-            color: var(--wheels);
-
-            img {
-                width: 44px;
-                height: 44px;
-                border-radius: 12px;
-                margin-right: 8px;
-            }
-        }
-
-        #content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-
-            #text {
-                margin-right: 8px;
-            }
-
-            #about {
-                background: var(--wheels);
-                color: var(--text);
-                line-height: 1.5;
-            }
-
-            a {
-                text-decoration: none;
-                color: var(--text);
-            }
-
-            a:hover {
-                color: var(--accent);
-            }
-        }
-    }
-
-    #alwaysart {
-        background: var(--background);
-        padding: 16px;
-        border-radius: 20px;
-        margin-top: 16px;
-
-        #header {
-            display: flex;
-            align-items: center;
-
-            img {
-                height: 44px;
-                width: 50px;
-                margin-right: 8px;
-            }
-        }
-
-         #content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-
-            #text {
-                margin-right: 8px;
-            }
-
-            #about {
-                background: var(--alwaysart);
-                color: var(--background);
-                line-height: 1.5;
-            }
-
-            a {
-                text-decoration: none;
-                color: var(--background);
-            }
-
-            a:hover {
-                color: var(--accent);
-            }
-        }
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 54px;
 }
 
-#projects {
-    h1 {
-        color: var(--pink);
-    }
-
-    .project {
-        background: var(--background);
-        padding-left: 16px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        border-radius: 20px;
-
-        h3 {
-            color: var(--pink);
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--text);
-        }
-
-            a:hover {
-            color: var(--pink);
-        }
-    }
-
-    #microbit, #huffman {
-        margin-top: 32px;
-    }
-
-    margin-bottom: 44px;
+#about::after, #work::after, #labs::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    border-bottom: 2px solid var(--accent);
 }
 
-#motto {
-    opacity: 1;
-    color: var(--text);
+#profile-photo {
+    display: block;
+    margin: auto;
+    width: 210px;
+    height: 227.31px;
+    border-radius: 50%;
+    outline: 5px solid var(--accent);
 }
 
 #footer {
-    bottom: 0;
-    width: 100%;
-    height: 44px;
-    padding-bottom: 8px;
-    text-align: center;
-    background: var(--page);
-}
-
- @media only screen and (max-width: 1200px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
-
-    #footer {
-        padding-bottom: 8px;
-    }
-}
-
- @media only screen and (max-width: 1000px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 16px;
-        font-size: 32px;
-    }
+    width: calc(100% - 2*100px);
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
 }
