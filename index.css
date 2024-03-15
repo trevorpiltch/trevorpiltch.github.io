@@ -8,6 +8,11 @@
     src: url('./SF-Pro-Rounded-Regular.otf') format('otf2');
 }
 
+@font-face {
+    font-family: 'SF Pro';
+    src: url('./fonts/SF-Pro-Text-Regular.otf') format('otf2');
+}
+
 :root {
     --text: #DADADB;
     --background: #1D1E20;
@@ -18,10 +23,24 @@ html {
     scroll-behavior: smooth;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle, #000 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
 body {
-    font-family: 'SF Pro Rounded', monospace;
+    font-family: 'SF Pro', monospace;
     background-color: var(--background);
     color: var(--text);
+    position: relative;
+    z-index: 0;
 }
 
 a:visited {
@@ -50,31 +69,54 @@ a:hover {
 }
 
 #content {
+    background-color: var(--background);
     margin: 0px 180px 0px 180px;
     line-height: 1.5rem;
-
-    p {
-        text-indent: 50px;
-    }
+    padding-bottom: 16px;
 }
 
-#about::before, #work::before, #labs::before, #words::before {
+#about::before, #words::before {
     content: "";
     display: block;
     height: 80px;
-    /* Adjust based on the height of your header */
     margin-top: -80px;
-    /* Should be the same as height */
     visibility: hidden;
 }
 
 #work {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 54px;
+
+    .header {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+    }
 }
 
-#about::after, #work::after, #labs::after {
+#wheels {
+    img {
+        width: 44px;
+        height: 44px;
+        border-radius: 11px;
+    }
+}
+
+#rocket-team {
+    img {
+        width: 114px;
+        height: 61px;
+    }
+}
+
+#always-art {
+    img {
+        width: 44px;
+        height: 51px;
+    }
+}
+
+#about::after, #labs::before, #labs::after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -88,15 +130,18 @@ a:hover {
     width: 210px;
     height: 227.31px;
     border-radius: 50%;
-    outline: 5px solid var(--accent);
 }
 
 #footer {
-    width: calc(100% - 2*100px);
-    margin: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     background-color: var(--background);
     color: var(--text);
+    padding-bottom: 4px;
+
+    p {
+        display: block;
+        margin: auto;
+        width: 400px;
+    }
+  
 }
