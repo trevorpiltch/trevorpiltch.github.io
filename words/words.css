@@ -58,7 +58,7 @@ a:hover {
 }
 
 #header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: calc(100% - 2*100px);
     padding: 0 100px;
@@ -78,7 +78,7 @@ a:hover {
     margin-top: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     #content {
         margin: 0px;
     }
