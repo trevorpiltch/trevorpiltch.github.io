@@ -78,6 +78,12 @@ a:hover {
     margin-top: 80px;
 }
 
+@media (max-width: 768px) {
+    #content {
+        margin: 0px;
+    }
+}
+
 .article {
     p {
         text-indent: 50px;
