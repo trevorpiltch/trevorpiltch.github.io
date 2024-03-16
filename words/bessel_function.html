@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>bessel_function</title>
+  <link rel="stylesheet" href="./words.css">
+  <script src="../index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="header">
+    <a href="../index.html"><h1>Trevor Piltch</h1></a>
+  </div>
+
+  <div id="content">
+  <h2 id="the-bessel-function-of-the-first-kind">The Bessel Function of the First Kind</h2>
+  <p> I was sitting in my differential equations class the other day when I was introduced to the Frobenius method. Curious,
+  I searched up some applications of the method and fell down a deep math Wikipedia rabbit whole. Luckily, I managed to escape 
+  and ended up at <a href="https://www.math.arizona.edu/~zakharov/BesselFunctions.pdf">this</a> article about the Bessel function. It's a really interesting article 
+  and so I decided to see if I could derive it from the Frobenius method. 
+  </p>
+  <p>Let’s analyze Bessel’s equation. It’s common to refer to the parameter p as the <em>order</em> of the equation.: <span class="math display">\[x^2y&#39;&#39;+xy&#39;+(x^2-p^2)y=0\]</span> To
+  start, let’s get this in standard form by dividing by <span
+  class="math inline">\(x^2\)</span>: 
+  <span class="math inline">\(y'' + y' + (1-\frac{p^2}{x^2})y=0\)</span> <span
+  class="math inline">\(%\)</span> This should be ringing some alarm bells
+  with <em>x</em> in the denominator, as <span
+  class="math inline">\(x=0\)</span> makes this undefined. So we say <span
+  class="math inline">\(x_0=0\)</span> is a <em>singular point</em>. Let’s
+  check if it’s regular by checking 
+  <span class="math inline">\(x\frac{Q}{P}\)</span> and 
+  <span class="math inline">\(x^2\frac{R}{P}\)</span> : <span
+  class="math display">\[x\frac{Q}{P}=1\]</span> <span
+  class="math display">\[x^2\frac{R}{P}=x^2-p^2\]</span> These are both
+  analytic functions and are well defined for all x in <span
+  class="math inline">\(\mathbb{R}\)</span>. Notice that this means <span
+  class="math inline">\(x=0\)</span> is a <em>regular singular point</em>.
+  The next step in analyzing this ODE is to find the roots of the indicial
+  equation. Recall the indicial equation is defined as <span
+  class="math inline">\(F(r)=r(r-1)+b_0r+c_0=0\)</span> Using the
+  expressions from <span class="math inline">\(x\frac{Q}{P}\)</span> and
+  <span class="math inline">\(x^2\frac{R}{P}\)</span>, we get the
+  expansions: <span class="math display">\[x\frac{Q}{P}=1+(0)O(x)\]</span>
+  <span
+  class="math display">\[x^2\frac{R}{P}=-p^2+0x+x^2+(0)O(x^3)\]</span>
+  From these, we can see that <span class="math inline">\(b_0=1\)</span>
+  and <span class="math inline">\(c_0=-p^2\)</span> and the only other
+  non-zero coefficient is <span class="math inline">\(c_2=1\)</span>.
+  Let’s plug this back into our indicial equation and solve for the roots.
+  <span class="math display">\[F(r)=r(r-1)+r-p^2\]</span> <span
+  class="math display">\[=r^2-r+r-p^2\]</span> <span
+  class="math inline">\(r^2-p^2\)</span> <span
+  class="math inline">\(\Rightarrow r=± p\)</span> For this example, we’re
+  only going to take <span class="math inline">\(r=p\)</span> but the
+  process for <span class="math inline">\(r=-p\)</span> is the same. Let’s
+  calculate the first few coefficients using the <em>method of
+  frobenius</em>: <span
+  class="math display">\[a_n=\frac{-1}{F(n+p)}\sum_{k=0}^{n-1}a_k[(k+p)b_{n-k}+c_{n-k}]\]</span>
+  <span class="math display">\[a_1=\frac{-1}{F(1+p)}(0)=0\]</span> <span
+  class="math display">\[a_2=\frac{-1}{F(2+p)}\sum_{k=0}^{1}a_k[(k+p)b_{2-k}+c_{2-k}]=\frac{-1}{F(2+p)}a_0\]</span>
+  <span
+  class="math display">\[a_3=\frac{-1}{F(3+p)}\sum_{k=0}^{2}a_k[(k+p)b_{3-k}+c_{3-k}]=\frac{-1}{F(3+p)}a_1\]</span>
+  <span
+  class="math display">\[a_4=\frac{-1}{F(4+p)}\sum_{k=0}^{4}a_k[(k+p)b_{4-k}+c_{4-k}]=\frac{-1}{F(4+p)}a_2\]</span></p>
+  <p>Hopefully you’ve noticed a pattern here. The general term of <span
+  class="math inline">\(a_n\)</span> is given by <span
+  class="math display">\[a_n=\frac{-a_{n-2}}{F(n+p)}\]</span> However, we
+  can simplify this quite nicely by noticing that all the odd coefficients
+  depend on <span class="math inline">\(a_1\)</span> which is identically
+  equal to <span class="math inline">\(0\)</span>. So we can reindex to
+  only take the odd indicies and evaluate our function <span
+  class="math inline">\(F(n+p)\)</span>: <span
+  class="math display">\[a_{2n}=\frac{-a_{2n-2}}{4n(n+p)}\]</span> Let’s
+  find the first few terms explicitly: <span
+  class="math display">\[a_2=\frac{-a_0}{4*1(1+p)}\]</span> <span
+  class="math inline">\(a_4=\frac{-a_2}{4*2*(2+p)}=\frac{(-1)^2a_0}{4^22*1(1+p)(2+p)}\)</span>
+  <span class="math inline">\(\vdots\)</span> <span
+  class="math display">\[a_{2n}=\frac{(-1)^ka_0}{4^kk!(1+p)\dots(2+p)}\]</span>
+  To simplify our calculations, we introduce the gamma function, which is
+  a generalized factorial where <span
+  class="math inline">\(\Gamma(x+1)=x!\)</span>: <span
+  class="math display">\[\Gamma(x)=\int_0^{\infty}e^{-t}t^{x-1}dt\]</span>
+  We’ll replace that in our expression to get: <span
+  class="math display">\[a_{2n}=\frac{(-1)^ka_0}{4^k\Gamma(k+1)\Gamma(k+p+1)}\]</span>
+  To get the Bessel function, we’ll take <span
+  class="math inline">\(a_0=\frac{1}{2^p\Gamma(p+1)}\)</span>: <span
+  class="math display">\[a_{2n}=\frac{(-1)^ka_0}{4^k2^p\Gamma(k+1)\Gamma(k+p+1)}\]</span>
+  When we plug this into our series solution <span
+  class="math inline">\(y(x)\)</span>, we get <span
+  class="math display">\[y(x)=\sum_{n=0}^{\infty}\frac{(-1)^n}{\Gamma(n+1)\Gamma(p+k+1)}(\frac{x}{2})^{2n+p}\]</span>
+  And thus we have arrived at the Bessel function of the first kind,
+  normally denoted by <span class="math inline">\(J_1(x)\)</span>: <span
+  class="math display">\[J_1(x)=\sum_{n=0}^{\infty}\frac{(-1)^n}{\Gamma(n+1)\Gamma(p+k+1)}(\frac{x}{2})^{2n+p}\]</span></p>
+
+  <p>
+    As you can see, this is a pretty complicated function, but it has some nice practical uses. For example, it can be used to model vibrations in a circular drum. 
+    It's also useful for solving a whole host of ODEs in cylindrical coordinates and is a key part of the solution to the wave equation in cylindrical coordinates.
+    Overall, it's a pretty cool function and I'm glad I fell down the Wikipedia rabbit hole to learn about it.
+  </p>
+  </div>
+
+    <div id="footer">
+      <p>
+        Made by Trevor, with Caffeine.
+        &copy; 2024 Trevor Piltch
+      </p>
+    </div>
+</body>
+</html>
