@@ -19,7 +19,6 @@
     --accent: #6364FF;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -44,28 +43,14 @@ body {
     z-index: 0;
 }
 
-#words .word  {
-    background-color: #26262c;
-    padding: 8px 16px;
-    margin: 16px;
-    border-radius: 4px;
-}
-
-#labs .lab {
-    background-color: #26262c;
-    padding: 8px 16px;
-    margin: 16px;
-    border-radius: 4px;
-}
-
-/* Link formatting */
 a:visited {
     color: var(--text);
 }
 
 a {
     color: var(--text);
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 a:hover {
@@ -82,6 +67,7 @@ a:hover {
     align-items: center;
     background-color: var(--background);
     color: var(--text);
+    z-index: 1000;
 }
 
 #content {
@@ -89,67 +75,17 @@ a:hover {
     margin: 0px 180px 0px 180px;
     line-height: 1.5rem;
     padding-bottom: 16px;
+    margin-top: 80px;
 }
 
-@media (max-width: 600px) {
-    #content {
-        margin: 0px;
+.article {
+    p {
+        text-indent: 50px;
     }
-}
-
-#work {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 54px;
-
-    .header {
-        display: grid;
-        grid-template-columns: 0.2fr 1fr;
+    
+    h1, h3  {
+        text-align: center;
     }
-}
-
-@media (max-width: 800px) {
-    #work {
-        display: block;
-    }
-}
-
-#wheels {
-    img {
-        width: 44px;
-        height: 44px;
-        border-radius: 11px;
-    }
-}
-
-#rocket-team {
-    img {
-        width: 114px;
-        height: 61px;
-    }
-}
-
-#always-art {
-    img {
-        width: 44px;
-        height: 51px;
-    }
-}
-
-#about::after, #labs::before, #labs::after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 20%;
-    border-bottom: 2px solid var(--accent);
-}
-
-#profile-photo {
-    display: block;
-    margin: auto;
-    width: 210px;
-    height: 227.31px;
-    border-radius: 50%;
 }
 
 #footer {
@@ -164,5 +100,5 @@ a:hover {
         margin: auto;
         width: 400px;
     }
-  
+
 }
