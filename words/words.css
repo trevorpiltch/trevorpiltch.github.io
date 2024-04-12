@@ -19,6 +19,12 @@
     --accent: #6364FF;
 }
 
+:root {
+    --text: #DADADB;
+    --background: #1D1E20;
+    --accent: #6364FF;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -43,23 +49,40 @@ body {
     z-index: 0;
 }
 
+#words .word {
+    background-color: #26262c;
+    padding: 8px 16px;
+    margin: 16px;
+    border-radius: 4px;
+}
+
+#labs .lab {
+    background-color: #26262c;
+    padding: 8px 16px;
+    margin: 16px;
+    border-radius: 4px;
+}
+
+/* Link formatting */
 a:visited {
     color: var(--text);
 }
 
 a {
     color: var(--text);
-    text-decoration: underline;
-    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--accent);
 }
 
+.word a:hover h2 {
+    color: var(--accent);
+}
+
+
 #header {
-    /* position: fixed; */
-    top: 0;
     width: calc(100% - 2*100px);
     padding: 0 100px;
     display: flex;
@@ -67,7 +90,6 @@ a:hover {
     align-items: center;
     background-color: var(--background);
     color: var(--text);
-    z-index: 1000;
 }
 
 #content {
@@ -75,36 +97,42 @@ a:hover {
     margin: 0px 180px 0px 180px;
     line-height: 1.5rem;
     padding-bottom: 16px;
-    margin-top: 80px;
 }
 
-@media (max-width: 900px) {
+#header {
+    margin: 0px;
+    font-size: 17px;
+}
+
+@media (max-width: 1000px) {
     #content {
-        margin: 0px;
+        margin: 32px;
+        font-size: 28px;
+        line-height: 1.5em;
+    }
+
+    #content h2 {
+        font-size: 44px;
+    }
+
+    #header {
+        font-size: 26px;
     }
 }
 
-.article {
-    p {
-        text-indent: 50px;
-    }
-    
-    h1, h3  {
-        text-align: center;
-    }
-}
 
 #footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     background-color: var(--background);
     color: var(--text);
-    padding-bottom: 4px;
     opacity: 0.3;
 
-    p {
-        display: block;
-        margin: auto;
-        width: 400px;
+    @media (max-width: 1000px) {
+        font-size: 27px;
     }
-
 }

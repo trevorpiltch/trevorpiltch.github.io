@@ -19,7 +19,6 @@
     --accent: #6364FF;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -72,6 +71,10 @@ a:hover {
     color: var(--accent);
 }
 
+.word a:hover h2 {
+    color: var(--accent);
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -91,11 +94,23 @@ a:hover {
     padding-bottom: 16px;
 }
 
-@media (max-width: 768px) {
-    #content {
-        margin: 0px;
-    }
+#header {
+    margin: 0px;
+    font-size: 17px;
 }
+
+@media (max-width: 1000px) {
+    #content {
+        margin: 32px;
+        font-size: 28px;
+        line-height: 1.5em;
+    }
+
+    #content h2 {
+        font-size: 44px;
+    }   
+}
+
 
 #work {
     display: grid;
@@ -108,7 +123,7 @@ a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #work {
         display: block;
     }
@@ -119,6 +134,10 @@ a:hover {
         width: 44px;
         height: 44px;
         border-radius: 11px;
+        @media (max-width: 1000px) {
+            width: 80px;
+            height: 80px;
+        }
     }
 }
 
@@ -126,6 +145,12 @@ a:hover {
     img {
         width: 114px;
         height: 61px;
+
+        @media (max-width: 1000px) {
+            width: 171px;
+            height: 92px;
+            padding-right: 3px;
+        }
     }
 }
 
@@ -133,6 +158,11 @@ a:hover {
     img {
         width: 44px;
         height: 51px;
+
+        @media (max-width: 1000px) {
+            width: 88px;
+            height: 102px;
+        }
     }
 }
 
@@ -153,16 +183,17 @@ a:hover {
 }
 
 #footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     background-color: var(--background);
     color: var(--text);
-    padding-bottom: 4px;
     opacity: 0.3;
 
-    p {
-        display: block;
-        margin: auto;
-        width: 400px;
+    @media (max-width: 1000px) {
+        font-size: 27px;
     }
-  
 }

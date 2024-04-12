@@ -20,27 +20,28 @@
 
     <div id="content">
         <div id="about">
-
             <image src="images/profile.jpeg" alt="Profile photo" id="profile-photo"></image>
 
             <h2>About</h2>
             <p>
                 Hi, I'm Trevor! I'm studying software engineering at McGill University in Montreal. I've worked with a variety of
-                languages and platforms over the past few years, but my passion is iOS app development. My focus is always on the user
-                experience and not just about writing good code.
+                languages and platforms over the past few years, but my passion is iOS app development and low level programming. I love learning 
+                and I'm always learning a new language or framework (check out my labs section to see what I'm currently learning!) 
             </p>
             <p>
-                Currently, I'm working on a skateboard tracking app called Wheels. It takes advantage of a lot of very good Apple
-                frameworks like location, sharing, and activities. It's been a fun project and one that I use quite often when I ride.
+                I'm the lead software engineer for the flight computer project on the McGill Rocket Team. It's an entirely student run
+                club and we've won multiple awards in the past few years. As lead, I'm in charge of architecting the whole software system 
+                and managing tasks for the general members to work on. I like taking on the more challenging tasks and I've solved 
+                an I2C bus bug and written a real time operating system to manage the sensor inputs and ejection circuits. Check out my work 
+                section to learn more!
             </p>
             <p>
-                I'm also the lead software engineer for the flight computer on the McGill Rocket Team. It's an entirely student run
-                club, and we're currently working hard to develop our next generation rocket. In the role, I help manage members tasks
-                and also work on some embedded programming myself such as I2C communications and GPS buffer parsing. Check out my work
-                section to find out more!
+                One of my non-academic passions is skateboarding, and I'm working on a skateboard companion app called Wheels. It 
+                stores your riding routes and history and keeps track of your boards. It helps me to see what my riding stats (speed, distance, duration)
+                are and how often I'm using specific boards. It's been a very fun project and one that I use every time I ride.  
             </p>
-            <p>
-                If you have any questions about my work, or want to see if we can work together, you can send me an email of find me on
+           <p>
+                If you have any questions about my work, or want to see if we can work together, you can send me an email or find me on
                 LinkedIn. All my open source code is on GitHub if you want to take a look. I'm always open to new projects and ideas!
             </p>
         </div>
@@ -49,8 +50,7 @@
             <h2>Work</h2>
             <p>
                 Here's a list of the work I've done over the years. This includes some of my passion projects and a few things
-                I've
-                developed for others
+                I've developed for others
             </p>
         </div>
 
@@ -61,12 +61,17 @@
                     <h3>McGill Rocket Team</h3>
                 </div>
                 <p>
-                    I'm the lead software engineer on the flight computer sub-project. I manage the other members of the FC project
-                    and give
-                    them advice when writing code. Written in a mix of C and C++, the FC is by far the biggest project I've worked
-                    on. I've
-                    worked a lot on sensor communication using I2C and low level buffer handling.
+                    I was elected as the flight computer software lead by the previous flight computer leads and team captains. In the role, 
+                    I make all the high level decisions about the software project including the codebase architecture, testing strategies, and 
+                    which tools/frameworks to use. I also assign work to the general members and assist them if any problems arise.
                 </p>
+                <p>
+                    For the technically curious, the codebase is written in C and C++ for the STM32 microcontroller. The flight computer
+                    hardware is also entirely student created, and includes different sensors for temperature, pressure, acceleration, and magnetic 
+                    orientation. The software system takes all these inputs (through the I2C protocal) and manages the flight trajectory of the rocket. 
+                    At over one gb and thousands of lines of code, it's the biggest project I've ever worked on.
+                </p>
+
                 <p>
                     <strong>Links:</strong> <a href="https://www.mcgillrocketteam.com/">website</a>
                 </p>
@@ -153,7 +158,9 @@
             <div class="word" id="pinned">
                 <a href="words/meditation.html">
                     <h3>Meditation</h3>
+                  
                 </a>
+
                 <p>
                     For my final english assignment at Phillips Exeter Academy, I had to write a personal
                     essay about anything of my choosing. I was selected as one of 18 students from the 300 person class
@@ -161,7 +168,7 @@
                     was a three month
                     project and one of the most rewarding things I've ever written.
                 </p>
-            </div>
+        </div>
 
             <div class="word">
                 <a href="words/bessel_function.html">
@@ -180,6 +187,8 @@
     <div id="footer">
         <p>
             Made by Trevor, with Caffeine.
+        </p>
+        <p>
             &copy; 2024 Trevor Piltch
         </p>
     </div>
