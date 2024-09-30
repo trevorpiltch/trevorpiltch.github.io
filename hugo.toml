@@ -1,0 +1,5 @@
+baseURL = 'https://trevorpiltch.com'
+languageCode = 'en-us'
+title = 'Trevor Piltch'
+
+custom_css = ["css/bundle.css"]
