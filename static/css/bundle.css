@@ -205,11 +205,10 @@ sup {
     top: -0.5em;
 }
 a {
-    color: var(--text);
+    color: var(--secondary);
     background-color: transparent;
 }
 a:hover {
-    color: var(--primary);
     text-decoration: underline;
 }
 a:not([href]):not([tabindex]),
@@ -9318,6 +9317,7 @@ textarea:focus {
     -webkit-box-align: center;
     align-items: center;
     grid-area: right;
+    color: var(--text);
 }
 .footer__links {
     -webkit-box-flex: 1;
@@ -9339,7 +9339,7 @@ textarea:focus {
     }
 }
 .footer__copy {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text);
     white-space: nowrap;
     font-size: 12px;
     font-weight: 300;
