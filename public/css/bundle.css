@@ -121,6 +121,7 @@ legend {
  */
 :root {
     --primary: #7FBBB3;
+    --primary-50: rgba(127, 187, 179, 0.5);
     --secondary: #D599B6;
     --text: #D3C6AA;
     --background: #2D353B; 
@@ -8678,7 +8679,7 @@ input[type="email"]::placeholder {
     height: 100%;
     z-index: 1;
     background-color: var(--primary);
-    opacity: 50%;
+    opacity: 40%;
     -webkit-transform: skew(-13deg);
     transform: skew(-13deg);
 }
@@ -8701,6 +8702,7 @@ input[type="email"]::placeholder {
     font-size: 14px;
     font-weight: 300;
     color: var(--text);
+    opacity: 70%;
     z-index: 2;
     position: relative;
 }
@@ -8737,6 +8739,7 @@ html body {
     font-size: 20px;
     font-weight: 600;
     z-index: 2;
+    color: var(--text);
 }
 @media (min-width: 992px) {
     .experience__title {
@@ -8746,7 +8749,7 @@ html body {
 .experience__company {
     font-size: 14px;
     font-weight: 700;
-    color: #AE1B13;
+    color: var(--primary-50);
 }
 .clients {
     display: -webkit-box;
@@ -9713,8 +9716,11 @@ li.book-content p{
     object-fit: contain;
 }
 
-.experience__company{
-    color: #478079;
+
+#experience {
+  p {
+    color: var(--text);
+  }
 }
 
 .experience__location{
@@ -9723,6 +9729,10 @@ li.book-content p{
 
 .experience+.experience{
     padding-top: 0;
+}
+
+.experience p {
+  color: var(--text);
 }
 
 body.home div.experience{
@@ -9742,14 +9752,15 @@ body.home div.experience{
 .experience a:hover, 
 .experience a:active{
     display: block;
-    background-color: #488079;
+    background-color: var(--primary-50);
 }
+
 .experience.selected a > .experience__company,
 .experience:hover a > .experience__company,
 .experience:active a > .experience__company,
 .experience a:hover > .experience__company,
 .experience a:active > .experience__company{
-    color: white;
+  color: var(--background);
 }
 
 .all-experience-container{

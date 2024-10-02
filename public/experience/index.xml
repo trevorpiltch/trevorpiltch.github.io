@@ -6,14 +6,21 @@
     <description>Recent content in Experiences on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Dec 2007 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Job #1</title>
+      <title>Flight Computer Software Lead</title>
       <link>http://localhost:1313/experience/mrt/</link>
-      <pubDate>Sat, 01 Dec 2007 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/experience/mrt/</guid>
-      <description>&lt;h3 id=&#34;fixing-the-world-one-byte-at-a-time&#34;&gt;Fixing the world, one byte at a time&lt;/h3&gt;&#xA;&lt;p&gt;The beginning of a great career.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;flight-computer-software-lead&#34;&gt;Flight Computer Software Lead&lt;/h1&gt;&#xA;&lt;p&gt;I was elected as flight computer software lead by the previous lead and the team captains. It was very cool.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Junior iOS Developer</title>
+      <link>http://localhost:1313/experience/aa/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/aa/</guid>
+      <description>&lt;h3 id=&#34;junior-ios-developer&#34;&gt;Junior iOS Developer&lt;/h3&gt;&#xA;&lt;p&gt;I was elected as flight computer software lead by the previous lead and the team captains. It was very cool.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
