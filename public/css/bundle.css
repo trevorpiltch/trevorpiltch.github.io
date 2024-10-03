@@ -232,6 +232,7 @@ pre {
 }
 img {
     border-style: none;
+    border-radius: 10px;
 }
 table {
     border-collapse: collapse;
