@@ -123,6 +123,7 @@ legend {
     --primary: #7FBBB3;
     --primary-50: rgba(127, 187, 179, 0.5);
     --secondary: #D599B6;
+    --secondary-50: rgba(213, 153, 182, 0.5);
     --text: #D3C6AA;
     --background: #2D353B; 
     --breakpoint-xs: 0;
@@ -9718,7 +9719,7 @@ li.book-content p{
 }
 
 
-#experience {
+.experience {
   p {
     color: var(--text);
   }
@@ -9767,6 +9768,71 @@ body.home div.experience{
 .all-experience-container{
     margin-top: 50px;
 }
+
+
+/* Projects */
+.project {
+  p {
+    color: var(--text);
+  }
+}
+
+.project__location {
+    font-weight: normal;
+}
+
+.project +.project{
+    padding-top: 0;
+}
+
+.project p {
+  color: var(--text);
+}
+
+body.home div.project {
+    padding-top: 50px;
+}
+
+.project a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.project__title {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+    color: var(--text);
+}
+
+.project.selected a,
+.project:hover a,
+.project:active a,
+.project a:hover, 
+.project a:active{
+    display: block;
+    background-color: var(--primary-50);
+    color: --background;
+}
+
+.project:hover a > .project_title,
+.project:hover a {
+  display: block;
+  background-color: var(--secondary-50);
+}
+
+.project > .btn-primary {
+  background-color: var(--secondary); 
+}
+
+.project > .btn-frameless {
+  background-color: var(--primary);
+}
+
 .footer__copy a{
     color: white;
 }

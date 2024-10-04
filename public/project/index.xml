@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Trevor Piltch</title>
+    <link>http://localhost:1313/project/</link>
+    <description>Recent content in Projects on Trevor Piltch</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARM Assembly</title>
+      <link>http://localhost:1313/project/arm_assembly/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/arm_assembly/</guid>
+      <description>&lt;h1 id=&#34;arm-assembly&#34;&gt;ARM Assembly&lt;/h1&gt;&#xA;&lt;p&gt;My motivation behind learning assembly comes mainly from my work on the McGillRocket team, where I am in charge of the flight computer software. This system uses a lot of low-level C/C++ code that needs to be optimized. In order to better understand the code compilation, and write code more efficiently, I wanted to learn about how the code worked under the hood. Hence, I decided to learn assembly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Labs</title>
+      <link>http://localhost:1313/project/labs/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/labs/</guid>
+      <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
