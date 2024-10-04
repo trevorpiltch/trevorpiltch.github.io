@@ -1,6 +1,5 @@
 <section id="breadcrumb-bar" class="breadcrumb-bar container">
         <ul class="breadcrumbs">
-            <li class="breadcrum-item"><span><a href="{{ relURL "" }}">Home</a></span></li>
             {{- $.Scratch.Set "url" "" -}}
             {{- range (split .RelPermalink "/") -}}
                 {{- if (gt (len .) 0) -}}    

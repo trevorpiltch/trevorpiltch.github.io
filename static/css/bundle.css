@@ -3514,11 +3514,11 @@ input[type="submit"].btn-block {
 .breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
-    color: #6c757d;
+    color: var(--text);
     content: "/";
 }
 .breadcrumb-item.active {
-    color: #6c757d;
+    color: var(--text);
 }
 .pagination {
     display: -webkit-box;
@@ -8248,7 +8248,7 @@ p {
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
-    color: #333;
+    color: var(--text);
 }
 p + p {
     margin-top: -12px;
@@ -9641,6 +9641,7 @@ html body ::selection{
 ul.breadcrumbs{
     display: inline;
     padding-left: 0;
+    color: var(--primary);
 }
 ul.breadcrumbs li:not(:last-child):after{
     content: ">";
@@ -9649,6 +9650,11 @@ ul.breadcrumbs li:not(:last-child):after{
 }
 ul.breadcrumbs li{
     display: inline;
+    color: var(--text);
+}
+
+ul.breadcrumbs a {
+  color: var(--primary);
 }
 
 .book-category{
@@ -9771,6 +9777,13 @@ body.home div.experience{
 
 
 /* Projects */
+.project a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .project {
   p {
     color: var(--text);
@@ -9806,14 +9819,26 @@ body.home div.project {
     font-size: 20px;
     font-weight: 600;
     z-index: 2;
-    color: var(--text);
+    color: var(--secondary);
+}
+
+.project a:hover > .project__title {
+  color: var(--background);
+}
+
+.project__description {
+  color: var(--text);
+}
+
+.project__date {
+  color: var(--text);
 }
 
 .project.selected a,
 .project:hover a,
 .project:active a,
 .project a:hover, 
-.project a:active{
+.project a:active {
     display: block;
     background-color: var(--primary-50);
     color: --background;

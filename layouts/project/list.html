@@ -9,10 +9,15 @@
 <body>
   {{ partial "header.html" . }}
 
-  {{ partial "project.html" . }}
+  {{ partial "breadcrumb.html" .}}
+
+  <section id="project" class="section section--border-bottom rad-animation-group">
+    {{ partial "project.html" . }}
+  </section>
 
   {{ partial "footer.html" . }} {{ partial "base-foot.html" . }}
 </body>
 
 </html>
+
 <!-- endinject -->

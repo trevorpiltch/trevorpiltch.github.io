@@ -12,9 +12,9 @@
             <div class="project">
                 <a href="{{.Permalink}}">
                   <div class="project__title">{{ .Params.title }}</div>
-                  <div class="experience__date">{{ .Params.duration}}</div>
-                  <div class="experience__company">
-                      {{ .Content | truncate 150 | safeHTML }}
+                  <div class="project__date">{{ .Params.duration}}</div>
+                  <div class="project__description">
+                      {{ .Params.description}}
                   </div>
                 </a>
             </div>

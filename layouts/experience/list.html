@@ -9,7 +9,11 @@
 <body>
   {{ partial "header.html" . }}
 
-  {{ partial "experience.html" . }}
+  {{ partial "breadcrumb.html" .}}
+
+  <section id="experience" class="section section--border-bottom rad-animation-group">
+    {{ partial "experience.html" . }}
+  </section>
 
   {{ partial "footer.html" . }} {{ partial "base-foot.html" . }}
 </body>
