@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trevor Piltch</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Trevor Piltch</description>
+    <title>Projects on Trevor Piltch</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ARM Assembly</title>
       <link>http://localhost:1313/projects/arm_assembly/</link>
@@ -21,20 +21,6 @@
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/labs/</guid>
       <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Flight Computer Software Lead</title>
-      <link>http://localhost:1313/experience/mrt/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/mrt/</guid>
-      <description>&lt;h1 id=&#34;flight-computer-software-lead&#34;&gt;Flight Computer Software Lead&lt;/h1&gt;&#xA;&lt;p&gt;Todo.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Junior iOS Developer</title>
-      <link>http://localhost:1313/experience/aa/</link>
-      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/aa/</guid>
-      <description>&lt;h1 id=&#34;junior-ios-developer&#34;&gt;Junior iOS Developer&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;AlwaysArt&lt;/strong&gt;&#xA;Todo.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

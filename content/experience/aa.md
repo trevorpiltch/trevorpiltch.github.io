@@ -6,7 +6,6 @@ jobTitle: "Junior iOS Developer"
 company: "AlwaysArt"
 location: "Portland, Maine"
 duration: "2022-"
-
 ---
 # Junior iOS Developer 
 **AlwaysArt**
