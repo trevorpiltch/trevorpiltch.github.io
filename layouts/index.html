@@ -42,12 +42,6 @@
             </picture>
           </div>
         </div>
-        <div class="row platform-links">
-          <div class="col-12">
-            <a href="https://www.linkedin.com/in/trevor-piltch-41276a26a/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">LinkedIn</a>
-            <a href="https://github.com/trevorpiltch" target="_blank" rel="noopener noreferrer" aria-label="github">GitHub</a>
-          </div>
-        </div>
       </div>
     </section>
       
@@ -174,6 +168,7 @@
         </div>
     </section>
 
+    <!--Projects-->
     <section id="project" class="section-project section section--border-bottom rad-animation-group">
         <div class="container">
             <div class="row flex-column-reverse flex-md-row rad-fade-down">
@@ -193,6 +188,7 @@
                         <a
                           href="https://github.com/trevorpiltch"
                           class="btn btn-primary btn-block"
+                          id="project-primary"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -204,8 +200,9 @@
                         <a
                           href="http://localhost:1313/project"
                           class="btn btn-frameless btn-block"
+                          id="project-secondary"
                           rel="noopener noreferrer"
-                        >
+                    >
                           View All
                         </a>
                       </div>
@@ -216,7 +213,24 @@
         </div>
     </section>
 
-    <footer class="footer">
+  <!-- Blog -->
+    <section id="blog" class="rad-showcase--index rad-animation-group rad-fade-down">
+      <div class="container">
+        <div class="row flex-column-reverse flex-md-row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h2>Blog</h2>
+            <p class="lead">
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profile-image">
+          {{ partial "blog.html" .}}
+          </div>
+      </div>
+    </section>
+
+  <!--Footer-->
+   <footer class="footer">
       <div class="container">
         <div class="footer__left">
           <div class="footer__copy">

@@ -16,6 +16,7 @@
             {{ $currentPageID := .Page.File.UniqueID }}
             {{ range where .Site.RegularPages.ByDate.Reverse "Type" "project" }}
 
+            <div class="project">
             <div class="project {{ if eq .Page.File.UniqueID $currentPageID }} selected {{ end }}" >
               <a href="{{.Permalink}}">
                 <div class="project__title">{{ .Params.title }}</div>
@@ -23,6 +24,7 @@
                   {{ .Params.description }}
                 </div>
               </a>
+            </div>
             </div>
             {{ end }}
           </div>

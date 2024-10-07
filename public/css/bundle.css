@@ -8703,7 +8703,7 @@ input[type="email"]::placeholder {
 .experience__date {
     font-size: 14px;
     font-weight: 300;
-    color: var(--text);
+    color: var(--primary);
     opacity: 70%;
     z-index: 2;
     position: relative;
@@ -8751,8 +8751,10 @@ html body {
 .experience__company {
     font-size: 14px;
     font-weight: 700;
-    color: var(--primary-50);
+    color: var(--text);
+    opacity: 50%;
 }
+
 .clients {
     display: -webkit-box;
     display: flex;
@@ -9769,6 +9771,7 @@ body.home div.experience{
 .experience a:hover > .experience__company,
 .experience a:active > .experience__company{
   color: var(--background);
+  opacity: 100%;
 }
 
 .all-experience-container{
@@ -9819,19 +9822,16 @@ body.home div.project {
     font-size: 20px;
     font-weight: 600;
     z-index: 2;
-    color: var(--secondary);
-}
-
-.project a:hover > .project__title {
-  color: var(--background);
+    color: var(--text);
 }
 
 .project__description {
   color: var(--text);
+  opacity: 50%;
 }
 
 .project__date {
-  color: var(--text);
+  color: var(--secondary);
 }
 
 .project.selected a,
@@ -9850,12 +9850,28 @@ body.home div.project {
   background-color: var(--secondary-50);
 }
 
-.project > .btn-primary {
-  background-color: var(--secondary); 
+.project:hover a > .project__description {
+  color: var(--background);
+  opacity: 100%;
 }
 
-.project > .btn-frameless {
+a#project-primary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+a#project-primary:hover {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+
+a#project-secondary {
+  color: var(--primary);
+}
+
+a#project-secondary:hover {
   background-color: var(--primary);
+  color: var(--background);
 }
 
 .footer__copy a{
