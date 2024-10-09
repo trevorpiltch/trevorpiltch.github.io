@@ -8703,7 +8703,7 @@ input[type="email"]::placeholder {
 .experience__date {
     font-size: 14px;
     font-weight: 300;
-    color: var(--text);
+    color: var(--primary);
     opacity: 70%;
     z-index: 2;
     position: relative;
