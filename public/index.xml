@@ -41,7 +41,7 @@
       <link>http://localhost:1313/experience/aa/</link>
       <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/experience/aa/</guid>
-      <description>&lt;h1 id=&#34;junior-ios-developer&#34;&gt;Junior iOS Developer&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;AlwaysArt&lt;/strong&gt;&#xA;Todo.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;junior-ios-developer&#34;&gt;Junior iOS Developer&lt;/h1&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.alwaysart.com/&#34;&gt;AlwaysArt&lt;/a&gt; is a startup based in California looking to connect artists, galleries, and collectors. The founder reached out to my dad (also a software engineer) to see if he knew anyone who would work on an internal inventory management app for the company over the summer of 2022. Since I had just released my first app, my dad suggested that I could do it. &lt;br&gt;&#xA;I built the app in Swift and SwiftUI, interfacing with the live production backend (running on Ruby on Rails). The app helped increase inventory management from around 200 items to over 20000 utilizing QR code scanning and a responsive UI. &lt;br&gt;&#xA;Since the release of the internal app, I&amp;rsquo;ve been working on creating an app for collectors and galleries to view their artworks and acquire new pieces. It&amp;rsquo;s been a very long journey and a large project, but the app has plans to release to the public in late 2024 or early 2025.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
