@@ -9805,6 +9805,10 @@ body.home div.experience{
   color: var(--text);
 }
 
+.project__repo {
+  color: var(--secondary);
+}
+
 body.home div.project {
     padding-top: 50px;
 }
@@ -9830,9 +9834,11 @@ body.home div.project {
   opacity: 50%;
 }
 
-.project__date {
+.project__repo {
   color: var(--secondary);
 }
+
+
 
 .project.selected a,
 .project:hover a,
@@ -9840,7 +9846,7 @@ body.home div.project {
 .project a:hover, 
 .project a:active {
     display: block;
-    background-color: var(--primary-50);
+    background-color: var(--secondary-50);
     color: --background;
 }
 
@@ -9850,9 +9856,14 @@ body.home div.project {
   background-color: var(--secondary-50);
 }
 
-.project:hover a > .project__description {
+.project:hover a > .project__description 
+.project:hover a > .project__date {
   color: var(--background);
   opacity: 100%;
+}
+
+a#repo:hover {
+  color: var(--background);
 }
 
 a#project-primary {

@@ -12,11 +12,13 @@
             <div class="project">
                 <a href="{{.Permalink}}">
                   <div class="project__title">{{ .Params.title }}</div>
-                  <div class="project__date">{{ .Params.duration}}</div>
                   <div class="project__description">
                       {{ .Params.description}}
                   </div>
                 </a>
+                <div class="project__repo">
+                  <a id="repo" href="{{ .Params.link }}">Repo</a>
+                </div>
             </div>
             {{ end }}
         </div>

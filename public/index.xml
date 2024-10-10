@@ -6,8 +6,15 @@
     <description>Recent content on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PomoBit</title>
+      <link>http://localhost:1313/project/pomo_bit/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/pomo_bit/</guid>
+      <description>&lt;h1 id=&#34;pomobit&#34;&gt;PomoBit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Pomo-Bit&#34;&gt;Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;skills&#34;&gt;Skills&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Embedded C, HAL, Interrupts&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Pomodoro_Technique&#34;&gt;Pomodoro Technique&lt;/a&gt; is a technique of completing 25 minutes of deep work, followed by five minutes of real rest. Whenever I get stuck on a problem, I usually find the solution after stepping a way for a bit but I still find it hard to take that break and clear my head. Since I had the Micro:Bit v2 lying around, I decided to convert it into a simple pomodoro timer for my desk. I&amp;rsquo;ve found that having a physical object, separate from a Mac or phone app, helps me stay focused and avoid distractions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Test</title>
       <link>http://localhost:1313/blog/test/</link>
@@ -20,14 +27,14 @@
       <link>http://localhost:1313/project/arm_assembly/</link>
       <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/arm_assembly/</guid>
-      <description>&lt;h1 id=&#34;arm-assembly&#34;&gt;ARM Assembly&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; All the code from this project is credited to the author of &lt;a href=&#34;https://learning.oreilly.com/library/view/programming-with-64-bit/9781484258811&#34;&gt;this&lt;/a&gt; book. &lt;br&gt;&#xA;While working for the McGill Rocket Team, I was trying to debug an issue with operating system task scheduling. When stepping through the program, it would halt at a specific section of Assembly instructions. Since I had absolutely zero idea what was going on in that section (I was still a year or two from university assembly courses), I decided that was a good time to learn a little about Assembly. I found the aforementioned book and began reading, taking notes, and writing code. Once I&amp;rsquo;m done, I&amp;rsquo;m planning on creating a personal project in Assembly, although I&amp;rsquo;m not entirely sure what that&amp;rsquo;s going to be yet.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;arm-assembly&#34;&gt;ARM Assembly&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/arm-assembly&#34;&gt;Repo&lt;/a&gt; &lt;br&gt;&#xA;&lt;strong&gt;Disclaimer:&lt;/strong&gt; All the code from this project is credited to the author of &lt;a href=&#34;https://learning.oreilly.com/library/view/programming-with-64-bit/9781484258811&#34;&gt;this&lt;/a&gt; book. &lt;br&gt;&#xA;While working for the McGill Rocket Team, I was trying to debug an issue with operating system task scheduling. When stepping through the program, it would halt at a specific section of Assembly instructions. Since I had absolutely zero idea what was going on in that section (I was still a year or two from university assembly courses), I decided that was a good time to learn a little about Assembly. I found the aforementioned book and began reading, taking notes, and writing code. Once I&amp;rsquo;m done, I&amp;rsquo;m planning on creating a personal project in Assembly, although I&amp;rsquo;m not entirely sure what that&amp;rsquo;s going to be yet.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Labs</title>
       <link>http://localhost:1313/project/labs/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/labs/</guid>
-      <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Labs&#34;&gt;Repo&lt;/a&gt; &lt;br&gt;&#xA;I&amp;rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Flight Computer Software Lead</title>
