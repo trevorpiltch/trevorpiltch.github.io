@@ -7,5 +7,10 @@ description: Repo to contain a collection of repos, scripts, and notes I use for
 ---
 # Labs
 [Repo](https://github.com/trevorpiltch/Labs) \
-I've fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.
+Have you ever found yourself stuck in a cycle of passive learning, endlessly consuming books and videos without making tangible progress? I've been there too. This project is my answer to that common pitfall.
+
+### Overview
+This repository serves as my personal "lab" for learning. It's a curated collection of:
+- **Projects:** applications built from tutorials 
+- **Scripts:** small, focused code snippets to test ideas
 

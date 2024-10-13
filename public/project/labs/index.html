@@ -17,6 +17,23 @@
   </head>
 
  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    startup: {
+    ready() {
+      var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].color = '#D3C6AA'; 
+      MathJax.startup.defaultReady();
+    }
+  }
+  };
+</script>
+
   </head>
 
   <body>
@@ -29,6 +46,47 @@
               <span>Piltch</span>
             </a>   
           </div>
+ <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#project"
+                >PROJECTS</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#blog"
+                >BLOG</a
+              >
+            </li>
+            
+          </ul>
         </nav>
       </div>
     </header>
@@ -59,18 +117,6 @@
             
 
             <div class="project">
-            <div class="project " >
-              <a href="http://localhost:1313/project/arm_assembly/">
-                <div class="project__title">ARM Assembly</div>
-                <div class="project__description">
-                  I&#39;ve gotten interested in low-level C/C&#43;&#43; code from leading the McGill Rocket Team Flight Computer project which led me to look into Assembly to see what was going on under the hood.
-                </div>
-              </a>
-            </div>
-            </div>
-            
-
-            <div class="project">
             <div class="project  selected " >
               <a href="http://localhost:1313/project/labs/">
                 <div class="project__title">Labs</div>
@@ -81,11 +127,29 @@
             </div>
             </div>
             
+
+            <div class="project">
+            <div class="project " >
+              <a href="http://localhost:1313/project/grovers_algorithm/">
+                <div class="project__title">Grover&#39;s Algorithm</div>
+                <div class="project__description">
+                  My first foray into quantum computing, combining theoretical knowledge from class with practical implementation skills.
+                </div>
+              </a>
+            </div>
+            </div>
+            
           </div>
           <div class="col-12 col-md-7 mt-7 mt-sm-0">
             <h1 id="labs">Labs</h1>
 <p><a href="https://github.com/trevorpiltch/Labs">Repo</a> <br>
-I&rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.</p>
+Have you ever found yourself stuck in a cycle of passive learning, endlessly consuming books and videos without making tangible progress? I&rsquo;ve been there too. This project is my answer to that common pitfall.</p>
+<h3 id="overview">Overview</h3>
+<p>This repository serves as my personal &ldquo;lab&rdquo; for learning. It&rsquo;s a curated collection of:</p>
+<ul>
+<li><strong>Projects:</strong> applications built from tutorials</li>
+<li><strong>Scripts:</strong> small, focused code snippets to test ideas</li>
+</ul>
 
           </div>
         </div>
@@ -101,25 +165,7 @@ I&rsquo;ve fallen into the trap of reading books and watching videos while tryin
     </div>
   </div>
 </footer>
- <script>
-  window.addEventListener("load", function() {
-    try{
-      var observer = window.lozad(".lozad", {
-        rootMargin: window.innerHeight / 2 + "px 0px",
-        threshold: 0.01
-      }); 
-      observer.observe();
-    } catch(e) {
-      console.error(e);
-    }
-  });
-</script>
-<script defer src='http://localhost:1313/js/rad-animations.js'></script>
-<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
-<script defer src='http://localhost:1313/js/sticky-header.js'></script>
-<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
-<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
-
+ 
   </body>
 </html>
 

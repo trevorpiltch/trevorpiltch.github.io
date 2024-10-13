@@ -6,14 +6,21 @@
     <description>Recent content in Blogs on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/blog/test/</link>
-      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/test/</guid>
-      <description>&lt;p&gt;blah blah&lt;/p&gt;</description>
+      <title>Bessel Function of the First Kind</title>
+      <link>http://localhost:1313/blog/bessel_function/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/bessel_function/</guid>
+      <description>&lt;h1 id=&#34;the-bessel-function-of-the-first-kind&#34;&gt;The Bessel Function of the First Kind&lt;/h1&gt;&#xA;&lt;p&gt;I took differential equations in the winter of my first year at McGill. I absolutely loved that class and spent a lot of time after class talking to the professor and spending time learning other aspects of this field of math. One day, we learned about the Frobenius method of solving diff-eqs. Curious, I looked up what I could apply the method to, and found the Bessel Function. I tried deriving the function and wrote up my work below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meditation</title>
+      <link>http://localhost:1313/blog/meditation/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/meditation/</guid>
+      <description>&lt;h1 id=&#34;o1&#34;&gt;&lt;strong&gt;O(1)&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;01010100 01101000 01101001 01101110 01101011 00100000 01000100 01101001&#xA;01100110 01100110 01100101 01110010 01100101 01101110 01110100 00101110&lt;/p&gt;&#xA;&lt;h2 id=&#34;00000001&#34;&gt;00000001&lt;/h2&gt;&#xA;&lt;p&gt;To start, you sit down with a mug full of Red Bull because you&amp;rsquo;re scared&#xA;that you&amp;rsquo;ll fall asleep. You flip open your Mac and hear the iconic&#xA;chime. The machine whirs to life, opens its eyes and greets you with the&#xA;familiar, &lt;em&gt;please enter your password&lt;/em&gt;. With the Mac fully awake, you&#xA;can begin your process. Most importantly, is the music, so you open the&#xA;music app and put on some AC/DC. You know you shouldn&amp;rsquo;t listen to music&#xA;this loud at 11 p.m., but you also should be asleep, so you don&amp;rsquo;t really&#xA;care.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -8,17 +8,18 @@
 
 <body>
   {{ partial "header.html" . }}
+  {{ partial "breadcrumb.html" .}}
 
   <main class="blog"> 
     <section class="container section">
-      <h1 class="rad-fade-down rad-waiting rad-animate">{{ .Title }}</h1>
       <div class="posts-list container">
+            {{ partial "blog.html" . }}
         <!-- Renders the li.html content view for each content/posts/*.md -->
       </div>
     </section>
   </main>
 
-  {{ partial "footer.html" . }} {{ partial "base-foot.html" . }}
+  {{ partial "footer.html" . }} 
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
     {{ partial "head.html" . }} 
+    {{ partialCached "math.html" .}}
   </head>
 
   <body>
@@ -35,7 +36,7 @@
       </div>
     </section>
 
-    {{ partial "footer.html" . }} {{ partial "base-foot.html" . }}
+    {{ partial "footer.html" . }} 
   </body>
 </html>
 <!-- endinject -->

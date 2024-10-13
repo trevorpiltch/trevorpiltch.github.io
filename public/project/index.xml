@@ -6,21 +6,28 @@
     <description>Recent content in Projects on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ARM Assembly</title>
-      <link>http://localhost:1313/project/arm_assembly/</link>
-      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/arm_assembly/</guid>
-      <description>&lt;h1 id=&#34;arm-assembly&#34;&gt;ARM Assembly&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; All the code from this project is credited to the author of &lt;a href=&#34;https://learning.oreilly.com/library/view/programming-with-64-bit/9781484258811&#34;&gt;this&lt;/a&gt; book. &lt;br&gt;&#xA;While working for the McGill Rocket Team, I was trying to debug an issue with operating system task scheduling. When stepping through the program, it would halt at a specific section of Assembly instructions. Since I had absolutely zero idea what was going on in that section (I was still a year or two from university assembly courses), I decided that was a good time to learn a little about Assembly. I found the aforementioned book and began reading, taking notes, and writing code. Once I&amp;rsquo;m done, I&amp;rsquo;m planning on creating a personal project in Assembly, although I&amp;rsquo;m not entirely sure what that&amp;rsquo;s going to be yet.&lt;/p&gt;</description>
+      <title>PomoBit</title>
+      <link>http://localhost:1313/project/pomo_bit/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/pomo_bit/</guid>
+      <description>&lt;h1 id=&#34;pomobit&#34;&gt;PomoBit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Pomo-Bit&#34;&gt;Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the world of digital distractions, sometimes the best solution is a physical one. This project transforms a &lt;a href=&#34;https://microbit.org/&#34;&gt;Micro:Bit v2&lt;/a&gt; into a dedicated Pomodoro timer, bringing the power of focused work sessions right to your desk.&lt;/p&gt;&#xA;&lt;h3 id=&#34;highlights&#34;&gt;Highlights&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hardware:&lt;/strong&gt; Utilizes the Micro:Bit v2 platform&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Software:&lt;/strong&gt; Written in C using open source HAL libraries&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Functionality:&lt;/strong&gt; Alternates between 25-minute work sessions and 5-minute breaks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;personal-impact&#34;&gt;Personal Impact&lt;/h3&gt;&#xA;&lt;p&gt;Since implementing this timer, I&amp;rsquo;ve noticed that I&amp;rsquo;m more deliberate with my breaks. Before, I used a phone or mac app to track my breaks and ended up wasting my time on email or social media. This provides a visual and tactile separation between work time and break time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Labs</title>
       <link>http://localhost:1313/project/labs/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/labs/</guid>
-      <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve fallen into the trap of reading books and watching videos while trying to learn something. Taking the idea from science, this repo contains labs for gaining hands-on experience writing software. It contains projects, scripts, and experiments that I use to learn and explore new languages and frameworks.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Labs&#34;&gt;Repo&lt;/a&gt; &lt;br&gt;&#xA;Have you ever found yourself stuck in a cycle of passive learning, endlessly consuming books and videos without making tangible progress? I&amp;rsquo;ve been there too. This project is my answer to that common pitfall.&lt;/p&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;This repository serves as my personal &amp;ldquo;lab&amp;rdquo; for learning. It&amp;rsquo;s a curated collection of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Projects:&lt;/strong&gt; applications built from tutorials&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scripts:&lt;/strong&gt; small, focused code snippets to test ideas&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Grover&#39;s Algorithm</title>
+      <link>http://localhost:1313/project/grovers_algorithm/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/grovers_algorithm/</guid>
+      <description>&lt;h1 id=&#34;grovers-algorithm&#34;&gt;Grovers Algorithm&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Grovers-Algorithm&#34;&gt;Repo&lt;/a&gt; &lt;br&gt;&#xA;For my final project in CS590 (Computer Architecture) at Phillips Exeter Academy, I delved into the cutting-edge world of quantum computing by implementing &lt;a href=&#34;https://en.wikipedia.org/wiki/Grover%27s_algorithm&#34;&gt;Grover&amp;rsquo;s search algorithm&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;highlights&#34;&gt;Highlights&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Algorithm:&lt;/strong&gt; Grover&amp;rsquo;s algorithm, a quantum method for unstructured search&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Achieves \(O(\sqrt({N}))\), showcasing quantum speedup&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Framework:&lt;/strong&gt; Implemented using IBM&amp;rsquo;s &lt;a href=&#34;https://www.ibm.com/quantum/qiskit&#34;&gt;Qiskit&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h3&gt;&#xA;&lt;p&gt;This project provided hands-on experience with:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Quantum gates and their implementations&lt;/li&gt;&#xA;&lt;li&gt;Practical application of quantum computing concepts&lt;/li&gt;&#xA;&lt;li&gt;Advanced mathematical principles in computing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While the underlying mathematics and physics proved challenging, this project significantly enhanced my understanding of quantum computing principles and their potential impact on future computer architectures.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

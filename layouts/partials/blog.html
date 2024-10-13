@@ -1,3 +1,6 @@
+<head>
+    {{ partialCached "math.html" . }}
+</head>
 <div class="container">
     <div class="row flex-column-reverse flex-md-row rad-fade-down">
         <div class="">
@@ -9,11 +12,11 @@
             {{ $totalCount = len $xp }}
             {{ end }}
             {{ range first $totalCount $xp }}
-            <div class="project">
+            <div class="blog">
                 <a href="{{.Permalink}}">
-                  <div class="project__title">{{ .Params.title }}</div>
-                  <div class="project__date">{{ .Params.duration}}</div>
-                  <div class="project__description">
+                  <div class="blog__title">{{ .Params.title }}</div>
+                  <div class="blog__date">{{ .Params.blog}}</div>
+                  <div class="blog__description">
                       {{ .Params.description}}
                   </div>
                 </a>

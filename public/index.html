@@ -24,6 +24,47 @@
               <span>Piltch</span>
             </a>   
           </div>
+ <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#project"
+                >PROJECTS</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#blog"
+                >BLOG</a
+              >
+            </li>
+            
+          </ul>
         </nav>
       </div>
     </header>
@@ -232,7 +273,26 @@
         <div class="container">
             <div class="row flex-column-reverse flex-md-row rad-fade-down">
               <div class="col-12 cold-md-12 col-sm-6 mt-5 mt-sm-0">
-                <div class="container">
+                <head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    startup: {
+    ready() {
+      var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].color = '#D3C6AA'; 
+      MathJax.startup.defaultReady();
+    }
+  }
+  };
+</script>
+
+</head>
+<div class="container">
     <div class="row flex-column-reverse flex-md-row rad-fade-down">
         <div class="">
             
@@ -254,18 +314,6 @@
             </div>
             
             <div class="project">
-                <a href="http://localhost:1313/project/arm_assembly/">
-                  <div class="project__title">ARM Assembly</div>
-                  <div class="project__description">
-                      I&#39;ve gotten interested in low-level C/C&#43;&#43; code from leading the McGill Rocket Team Flight Computer project which led me to look into Assembly to see what was going on under the hood.
-                  </div>
-                </a>
-                <div class="project__repo">
-                  <a id="repo" href="https://github.com/trevorpiltch/arm-assembly">Repo</a>
-                </div>
-            </div>
-            
-            <div class="project">
                 <a href="http://localhost:1313/project/labs/">
                   <div class="project__title">Labs</div>
                   <div class="project__description">
@@ -274,6 +322,18 @@
                 </a>
                 <div class="project__repo">
                   <a id="repo" href="https://github.com/trevorpiltch/Labs">Repo</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <a href="http://localhost:1313/project/grovers_algorithm/">
+                  <div class="project__title">Grover&#39;s Algorithm</div>
+                  <div class="project__description">
+                      My first foray into quantum computing, combining theoretical knowledge from class with practical implementation skills.
+                  </div>
+                </a>
+                <div class="project__repo">
+                  <a id="repo" href="https://github.com/trevorpiltch/Grovers-Algorithm">Repo</a>
                 </div>
             </div>
             
@@ -305,7 +365,7 @@
                       
                       <div class="col-12 col-lg-4">
                         <a
-                          href="http://localhost:1313/project"
+                          href="/project"
                           class="btn btn-frameless btn-block"
                           id="project-secondary"
                           rel="noopener noreferrer"
@@ -321,17 +381,30 @@
     </section>
 
   
-    <section id="blog" class="rad-showcase--index rad-animation-group rad-fade-down">
-      <div class="container">
-        <div class="row flex-column-reverse flex-md-row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <h2>Blog</h2>
-            <p class="lead">
-            </p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profile-image">
-          <div class="container">
+   <section id="blog" class="section-project section rad-animation-group">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row rad-fade-down">
+              <div class="col-12 cold-md-12 col-sm-6 mt-5 mt-sm-0">
+                <head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    startup: {
+    ready() {
+      var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].color = '#D3C6AA'; 
+      MathJax.startup.defaultReady();
+    }
+  }
+  };
+</script>
+
+</head>
+<div class="container">
     <div class="row flex-column-reverse flex-md-row rad-fade-down">
         <div class="">
             
@@ -340,12 +413,22 @@
             
             
             
-            <div class="project">
-                <a href="http://localhost:1313/blog/test/">
-                  <div class="project__title">Test</div>
-                  <div class="project__date"></div>
-                  <div class="project__description">
-                      
+            <div class="blog">
+                <a href="http://localhost:1313/blog/bessel_function/">
+                  <div class="blog__title">Bessel Function of the First Kind</div>
+                  <div class="blog__date"></div>
+                  <div class="blog__description">
+                      Derivation of the Bessel Function from my differential equations class.
+                  </div>
+                </a>
+            </div>
+            
+            <div class="blog">
+                <a href="http://localhost:1313/blog/meditation/">
+                  <div class="blog__title">Meditation</div>
+                  <div class="blog__date"></div>
+                  <div class="blog__description">
+                      Tood.
                   </div>
                 </a>
             </div>
@@ -354,8 +437,31 @@
     </div>
 </div>
 
-          </div>
-      </div>
+              </div>
+                <div class="col-12 col-md-6">
+                  <div class="container-project">
+                    <div class="row">
+                      <h2>Blog</h2>
+                      <p class="lead">
+                        I used to not like writing very much. However, as I've matured as a student, I've realized that being able to communicate my ideas is as important as what the idea is. So, with my new website, I figured it would be a perfect opportunity to practice writing. Here is a collection of things I've written which I'm calling a "blog" for old 2000s nostalgia.
+                      </p>
+                    </div>
+                   <div class="row">
+                      <div class="col-12 col-lg-4">
+                        <a
+                          href="/blog"
+                          class="btn btn-primary btn-block"
+                          id="blog-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                        View All 
+                       </a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
     </section>
 
   
@@ -382,10 +488,5 @@
         }
       });
     </script>
-    <script defer src='http://localhost:1313/js/rad-animations.js'></script>
-    <script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
-    <script defer src='http://localhost:1313/js/sticky-header.js'></script>
-    <script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
-    <script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
   </body>
 </html>

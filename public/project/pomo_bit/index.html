@@ -17,6 +17,23 @@
   </head>
 
  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    startup: {
+    ready() {
+      var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].color = '#D3C6AA'; 
+      MathJax.startup.defaultReady();
+    }
+  }
+  };
+</script>
+
   </head>
 
   <body>
@@ -29,6 +46,47 @@
               <span>Piltch</span>
             </a>   
           </div>
+ <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#project"
+                >PROJECTS</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#blog"
+                >BLOG</a
+              >
+            </li>
+            
+          </ul>
         </nav>
       </div>
     </header>
@@ -36,7 +94,7 @@
 
 
     <section id="breadcrumb-bar" class="breadcrumb-bar container">
-        <ul class="breadcrumbs"><li class="breadcrum-item"><span><a href="/project">Project</a></span></li><li class="breadcrum-item"><span><a href="/project/pomo_bit">Pomo bit</a></span></li></ul>
+        <ul class="breadcrumbs"><li class="breadcrum-item"><span><a href="/project">Project</a></span></li><li class="breadcrum-item current">PomoBit</li></ul>
 </section>
 
     <section id="project" class="section section--border-bottom rad-animation-group">
@@ -60,18 +118,6 @@
 
             <div class="project">
             <div class="project " >
-              <a href="http://localhost:1313/project/arm_assembly/">
-                <div class="project__title">ARM Assembly</div>
-                <div class="project__description">
-                  I&#39;ve gotten interested in low-level C/C&#43;&#43; code from leading the McGill Rocket Team Flight Computer project which led me to look into Assembly to see what was going on under the hood.
-                </div>
-              </a>
-            </div>
-            </div>
-            
-
-            <div class="project">
-            <div class="project " >
               <a href="http://localhost:1313/project/labs/">
                 <div class="project__title">Labs</div>
                 <div class="project__description">
@@ -81,14 +127,31 @@
             </div>
             </div>
             
+
+            <div class="project">
+            <div class="project " >
+              <a href="http://localhost:1313/project/grovers_algorithm/">
+                <div class="project__title">Grover&#39;s Algorithm</div>
+                <div class="project__description">
+                  My first foray into quantum computing, combining theoretical knowledge from class with practical implementation skills.
+                </div>
+              </a>
+            </div>
+            </div>
+            
           </div>
           <div class="col-12 col-md-7 mt-7 mt-sm-0">
             <h1 id="pomobit">PomoBit</h1>
 <p><a href="https://github.com/trevorpiltch/Pomo-Bit">Repo</a></p>
-<h3 id="skills">Skills</h3>
-<p><em>Embedded C, HAL, Interrupts</em></p>
-<h3 id="about">About</h3>
-<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a> is a technique of completing 25 minutes of deep work, followed by five minutes of real rest. Whenever I get stuck on a problem, I usually find the solution after stepping a way for a bit but I still find it hard to take that break and clear my head. Since I had the Micro:Bit v2 lying around, I decided to convert it into a simple pomodoro timer for my desk. I&rsquo;ve found that having a physical object, separate from a Mac or phone app, helps me stay focused and avoid distractions.</p>
+<p>In the world of digital distractions, sometimes the best solution is a physical one. This project transforms a <a href="https://microbit.org/">Micro:Bit v2</a> into a dedicated Pomodoro timer, bringing the power of focused work sessions right to your desk.</p>
+<h3 id="highlights">Highlights</h3>
+<ul>
+<li><strong>Hardware:</strong> Utilizes the Micro:Bit v2 platform</li>
+<li><strong>Software:</strong> Written in C using open source HAL libraries</li>
+<li><strong>Functionality:</strong> Alternates between 25-minute work sessions and 5-minute breaks</li>
+</ul>
+<h3 id="personal-impact">Personal Impact</h3>
+<p>Since implementing this timer, I&rsquo;ve noticed that I&rsquo;m more deliberate with my breaks. Before, I used a phone or mac app to track my breaks and ended up wasting my time on email or social media. This provides a visual and tactile separation between work time and break time.</p>
 
           </div>
         </div>
@@ -104,25 +167,7 @@
     </div>
   </div>
 </footer>
- <script>
-  window.addEventListener("load", function() {
-    try{
-      var observer = window.lozad(".lozad", {
-        rootMargin: window.innerHeight / 2 + "px 0px",
-        threshold: 0.01
-      }); 
-      observer.observe();
-    } catch(e) {
-      console.error(e);
-    }
-  });
-</script>
-<script defer src='http://localhost:1313/js/rad-animations.js'></script>
-<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
-<script defer src='http://localhost:1313/js/sticky-header.js'></script>
-<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
-<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
-
+ 
   </body>
 </html>
 

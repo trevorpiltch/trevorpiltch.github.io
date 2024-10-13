@@ -5,9 +5,14 @@ link: https://github.com/trevorpiltch/Pomo-Bit
 description: Pomodoro timer for the Micro:Bit v2 microcontroller written in C
 ---
 # PomoBit
-[Repo](https://github.com/trevorpiltch/Pomo-Bit)
-### Skills
-_Embedded C, HAL, Interrupts_ 
+[Repo](https://github.com/trevorpiltch/Pomo-Bit) 
 
-### About
-The [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) is a technique of completing 25 minutes of deep work, followed by five minutes of real rest. Whenever I get stuck on a problem, I usually find the solution after stepping a way for a bit but I still find it hard to take that break and clear my head. Since I had the Micro:Bit v2 lying around, I decided to convert it into a simple pomodoro timer for my desk. I've found that having a physical object, separate from a Mac or phone app, helps me stay focused and avoid distractions.
+In the world of digital distractions, sometimes the best solution is a physical one. This project transforms a [Micro:Bit v2](https://microbit.org/) into a dedicated Pomodoro timer, bringing the power of focused work sessions right to your desk.
+
+### Highlights
+- **Hardware:** Utilizes the Micro:Bit v2 platform
+- **Software:** Written in C using open source HAL libraries
+- **Functionality:** Alternates between 25-minute work sessions and 5-minute breaks
+
+### Personal Impact
+Since implementing this timer, I've noticed that I'm more deliberate with my breaks. Before, I used a phone or mac app to track my breaks and ended up wasting my time on email or social media. This provides a visual and tactile separation between work time and break time.

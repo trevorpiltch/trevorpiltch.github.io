@@ -7,6 +7,29 @@
               <span>Piltch</span>
             </a>   
           </div>
+ <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ .Site.BaseURL | absURL }}">HOME</a>
+            </li>
+            {{ range .Site.Menus.header }}
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="{{ .URL | relURL }}"
+                >{{ .Name | upper }}</a
+              >
+            </li>
+            {{ end }}
+          </ul>
         </nav>
       </div>
     </header>

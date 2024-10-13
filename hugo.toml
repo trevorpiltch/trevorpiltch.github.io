@@ -3,3 +3,36 @@ languageCode = 'en-us'
 title = 'Trevor Piltch'
 
 custom_css = ["css/bundle.css"]
+
+[menu]
+
+  [[menu.header]]
+  name = "About"
+  URL = "#about"
+  weight = 1
+
+  [[menu.header]]
+  name = "Experience"
+  URL = "#experience"
+  weight = 2
+
+  [[menu.header]]
+  name = "Projects"
+  URL = "#project"
+  weight = 3
+
+  [[menu.header]]
+  name = "Blog"
+  URL = "#blog"
+  weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+[params]
+  math = true
