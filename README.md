@@ -1,4 +1,6 @@
 # Personal Website
+[![Deploy Hugo site to Pages](https://github.com/trevorpiltch/trevorpiltch.github.io/actions/workflows/hugo.yaml/badge.svg)](https://github.com/trevorpiltch/trevorpiltch.github.io/actions/workflows/hugo.yaml)
+
 ## About
 This is the project code for this website, written using the [Hugo](https://gohugo.io/) framework. I decided to migrate from my original plan of designing from scratch, 
 because I wanted to showcase more of what I've done. This is actually pretty easy in Hugo, because I can generate most of the page from markdown files. Most of the work 
