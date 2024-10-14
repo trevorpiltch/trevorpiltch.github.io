@@ -1,0 +1,23 @@
+<!-- inject:../components/baseHead/baseHeadStart.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ partial "head.html" . }} {{ partial "head_custom.html" . }}
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+
+  {{ partial "breadcrumb.html" .}}
+
+  <section id="project" class="section section--border-bottom rad-animation-group">
+    {{ partial "project.html" . }}
+  </section>
+
+  {{ partial "footer.html" . }}
+</body>
+
+</html>
+
+<!-- endinject -->
