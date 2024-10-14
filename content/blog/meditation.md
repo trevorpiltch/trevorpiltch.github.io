@@ -1,7 +1,7 @@
 ---
 date: 2023-04-21
 title: The Meditation
-description: As part of my final English assignment at Phillips Exeter Academy, I wrote a personal essay on a topic of my choice, which was selected as one of 18 out of 300 to be read aloud at the school church. This project, known as the "Meditation," took three months to complete and became one of the most rewarding pieces I've ever written
+description: As part of my final English assignment at Phillips Exeter Academy, I wrote a personal essay on a topic of my choice, which was selected as one of 18 out of 300 to be read aloud at the school chapel. This project, known as the "Meditation," took three months to complete and became one of the most rewarding pieces I've ever written
 ---
 # **O(1)**
 01010100 01101000 01101001 01101110 01101011 00100000 01000100 01101001
