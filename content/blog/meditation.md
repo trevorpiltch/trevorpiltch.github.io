@@ -1,15 +1,13 @@
 ---
 date: 2023-04-21
-title: Meditation
-description: Tood.
+title: The Meditation
+description: As part of my final English assignment at Phillips Exeter Academy, I wrote a personal essay on a topic of my choice, which was selected as one of 18 out of 300 to be read aloud at the school church. This project, known as the "Meditation," took three months to complete and became one of the most rewarding pieces I've ever written
 ---
-
-
 # **O(1)**
 01010100 01101000 01101001 01101110 01101011 00100000 01000100 01101001
 01100110 01100110 01100101 01110010 01100101 01101110 01110100 00101110
 
-## 00000001
+### 00000001
 To start, you sit down with a mug full of Red Bull because you're scared
 that you'll fall asleep. You flip open your Mac and hear the iconic
 chime. The machine whirs to life, opens its eyes and greets you with the
@@ -38,7 +36,7 @@ you get to the end of the file, you wish you hadn't. You wish there was
 more to go through. More mistakes to find. More code to be self-critical
 of.
 
-## 00000010
+### 00000010
 What's written at the start is a message in binary, the language of
 computers. Computers don't have the millions of years of evolution
 that's gone into the human brain, so they use transistors. A transistor
@@ -69,13 +67,13 @@ head that tells me that I made a mistake somewhere. I can't stop until I
 find that mistake. It drives me insane. Searching line after line.
 Character after character.
 
-## 00000011
+### 00000011
 It's true that most people don't understand how computers work, but
 there is a small subset of the population that does: computer
 programmers. My dad is one of those people. He spends his time buried in
 the terminal (the interface between the human and computer), with
 hundreds of lines of green and yellow text flying by. One might be:
-LinkedList is a raw type. `References to generic type LinkedList\<E\> should be parameterized`. This probably means nothing to most people, but my dad would understand instantly. He just forgot to add the object type to his list
+`LinkedList is a raw type. References to generic type LinkedList<E> should be parameterized`. This probably means nothing to most people, but my dad would understand instantly. He just forgot to add the object type to his list
 declaration.
 
 My dad's worked from home his entire life. His office was connected to
@@ -99,7 +97,7 @@ there was a miniature city within them to run everything). Despite this,
 the curiosity I used to have is still there. When the code runs, I feel
 that same rush I felt years ago standing behind my dad.
 
-## 00000100
+### 00000100
 The first time I ever touched a piece of code was in 6th grade, when my
 dad gave me a subscription to a coding website. I used it for a couple
 of months, but then adolescence took full effect and I stopped. I
@@ -153,7 +151,7 @@ smart and will go far in life, but never does. I couldn't live with
 this. I needed my life to be perfect and it was driving me insane that
 it wasn't.
 
-## 00000101
+### 00000101
 At the end of middle school, my dad and I went shopping for a new
 laptop. We were trying to figure out what specs were appropriate for my
 use, and originally, we settled on a base model MacBook Air. He
@@ -174,7 +172,7 @@ and code. He would eventually come up and have to kick me out, but by
 that time I had been coding for so long I saw lines of text when I
 closed my eyes.
 
-> 00000110
+### 00000110
 
 I spent those months trying so hard to figure out who I wanted to be,
 that I forgot who I was. I was the kid who used to sort Legos by colors
@@ -205,7 +203,7 @@ on a pulley is to call them. I've been hung up on the result rather than
 the process. Hung up on getting that perfect score, instead of focusing
 on learning the material.
 
-> 00000111
+### 00000111
 
 When I start coding, I just have an idea in my head, and a blank
 computer screen in front of me. One of the reasons I love coding so much
@@ -234,7 +232,7 @@ personality. My parents always tell me perfection is unachievable. My
 friends say, "It's impossible." I want to prove them all wrong. I want
 to show them that, if I work hard enough, I'll achieve perfection.
 
-> 00001000
+### 00001000
 
 When I was writing this meditation, I struggled to transfer my thoughts
 into words on the page. I spent night after night writing and rewriting
@@ -262,7 +260,7 @@ code perfect, with the perfect format, the perfect runtime. Ultimately,
 the computer doesn't know. The computer does not know the difference
 between perfection and non-perfection. If the code runs, it runs.
 
-> 00001001
+### 00001001
 
 The quote at the beginning of this meditation is "Think Different"
 written in binary. It's a quote from an Apple ad campaign, back before
@@ -284,8 +282,6 @@ be done in a constant time, no matter how hard I try. I could spend my
 whole life trying to find a way to do it, but I would never be
 successful.
 
-Piltch
-
 Part of me still wants to try. To spend my entire life chasing
 perfection, even if I know it's impossible. But what I'm beginning to
 realize, is that instead of focusing on that perfect O(1), I can focus
@@ -299,3 +295,5 @@ it works. Nor do I love it because my dad is a programmer. I love
 programming because it helps me process my thoughts. A program I write
 becomes an extension of my brain. That program won't be perfect, and
 that's okay. I'm learning that it's okay that I'm not perfect either.
+
+Trevor Piltch

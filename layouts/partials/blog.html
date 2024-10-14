@@ -22,6 +22,10 @@
                 </a>
             </div>
             {{ end }}
+
+            {{ if compare.Gt $xp $totalCount }} 
+              <a href="./project">And {{ sub $xpCount $totalCount }} more!</a>
+            {{ end }}
         </div>
     </div>
 </div>

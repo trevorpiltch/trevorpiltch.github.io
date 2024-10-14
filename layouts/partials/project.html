@@ -6,7 +6,7 @@
         <div class="">
             {{ $xp := (where .Site.RegularPages.ByDate.Reverse "Type" "project") }}
             {{ $xpCount := len $xp }}
-            {{ $totalCount := 6}}
+            {{ $totalCount := 3}}
             
             {{ if not .IsHome }}
             {{ $totalCount = len $xp }}
@@ -23,6 +23,10 @@
                   <a id="repo" href="{{ .Params.link }}">Repo</a>
                 </div>
             </div>
+            {{ end }}
+            
+            {{ if compare.Gt $xp $totalCount }} 
+              <a href="./project">And {{ sub $xpCount $totalCount }} more!</a>
             {{ end }}
         </div>
     </div>

@@ -11,8 +11,8 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/labs/</loc>
-    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/project/omnisync/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/bessel_function/</loc>
     <lastmod>2024-05-01T00:00:00+00:00</lastmod>
@@ -29,11 +29,20 @@
     <loc>http://localhost:1313/experience/miae/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/meditation/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/project/grovers_algorithm/</loc>
     <lastmod>2023-03-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/his_577/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/experience/wheels/</loc>
     <lastmod>2023-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/labs/</loc>
+    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/experience/aa/</loc>
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>

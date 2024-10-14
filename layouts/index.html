@@ -248,28 +248,6 @@
     </section>
 
   <!--Footer-->
-   <footer class="footer">
-      <div class="container">
-        <div class="footer__left">
-          <div class="footer__copy">
-              Made by Trevor, with Caffeine. Uses the <a href="https://themes.gohugo.io/themes/adritian-free-hugo-theme/">Adritian Free</a> theme for Hugo.
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      window.addEventListener("load", function() {
-        try{
-          var observer = window.lozad(".lozad", {
-            rootMargin: window.innerHeight / 2 + "px 0px",
-            threshold: 0.01
-          }); 
-          observer.observe();
-        } catch(e) {
-          console.error(e);
-        }
-      });
-    </script>
+    {{ partial "footer.html" . }}
   </body>
 </html>

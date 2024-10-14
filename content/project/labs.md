@@ -1,6 +1,6 @@
 ---
-date: 2024-10-01
-duration: 2023 - 
+date: 2022-08-24 
+duration: 2022 - 
 title: Labs
 link: https://github.com/trevorpiltch/Labs
 description: Repo to contain a collection of repos, scripts, and notes I use for learning and gaining hands-on experience.

@@ -4,7 +4,7 @@ draft: false
 title: "Flight Computer Software Lead"
 jobTitle: "Flight Computer Software Lead"
 company: "McGill Rocket Team"
-location: "Montreal, Canada"
+location: "Montreal, QC"
 duration: "May 2024-Present"
 
 ---
