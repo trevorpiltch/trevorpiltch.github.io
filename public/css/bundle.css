@@ -9066,6 +9066,7 @@ textarea:focus {
     align-items: center;
 }
 .footer__right {
+    color: var(--text);
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: end;
@@ -9073,7 +9074,6 @@ textarea:focus {
     -webkit-box-align: center;
     align-items: center;
     grid-area: right;
-    color: var(--text);
 }
 .footer__links {
     -webkit-box-flex: 1;
@@ -9099,6 +9099,10 @@ textarea:focus {
     white-space: nowrap;
     font-size: 12px;
     font-weight: 300;
+}
+
+.footer__right {
+  color: var(--text);
 }
 
 .rad-showcase {
