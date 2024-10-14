@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experiences on Trevor Piltch</title>
+    <link>http://localhost:1313/experience/</link>
+    <description>Recent content in Experiences on Trevor Piltch</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flight Computer Software Lead</title>
+      <link>http://localhost:1313/experience/mrt/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/mrt/</guid>
+      <description>&lt;h1 id=&#34;flight-computer-software-lead&#34;&gt;Flight Computer Software Lead&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.mcgillrocketteam.com/&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;The McGill Rocket Team (MRT) is a completely student run design team, focused on designing and launching a hybrid engine rocket. I joined the Flight Computer Software project in my first year at the university, and quickly gained an interest in the work. My first project was fixing a timing issue with an I2C bus. I then worked with another member to implement drivers for new acceleration, temperature, and pressure sensors. &lt;br&gt;&#xA;I was then elected by the team captains to become the new project lead in May 2024. Our planned launch was late August 2024 (at the &lt;a href=&#34;https://www.launchcanada.org/&#34;&gt;Launch Canada&lt;/a&gt; competition), and I worked throughout the summer to get the system ready for launch. In this time, I re-designed the system to use FreeRTOS and concurrent programming techniques (mutexes, queues, threads, etc.). I also implemented new commands to interface with the propulsion, radio, and payload systems over CAN buses, exhaustively tested a new SD card driver, and implemented a driver for a new video recorder inside the rocket. Although the rocket ultimately didn&amp;rsquo;t fly (due to a faulty fuel valve), the software system worked throughout the testing and various launch attempts. After the competition, I designed the new software system architecture, trained new members, and managed my team of around 8-9 people. I hosted weekly meetings along with work sessions and social events such as hackathons and team wide BBQs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VP Finance</title>
+      <link>http://localhost:1313/experience/miae/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/miae/</guid>
+      <description>&lt;h1 id=&#34;vp-finance&#34;&gt;VP Finance&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://studentpresidentmi.wixsite.com/website&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;The McGill Institute for Aerospace Engineering is a collection of McGill professors, students, and Montreal professionals, looking to advance research and knowledge in aerospace engineering. As VP finance for the student executive committee, I manage a budget exceeding $3,000. I ensure the strategic allocation of resources for impactful student events and educational workshops. By carefully balancing financial constraints with programming goals, I&amp;rsquo;ve successfully facilitated numerous guest speaker events, providing valuable networking and learning opportunities for our members.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lead Developer</title>
+      <link>http://localhost:1313/experience/wheels/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/wheels/</guid>
+      <description>&lt;h1 id=&#34;wheels&#34;&gt;Wheels&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/us/app/wheels-skateboarding-buddy/id1667530731?itsct=apps_box_badge&amp;amp;itscg=30200&#34;&gt;App Store&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;I got interested in skateboarding over the COVID-19 pandemic, and bought a 7.5&amp;quot; Alienware board to learn. I rode the board almost everyday through my neighborhood, and I wanted to know how fast and far I was going. Since I had just learned Swift a year before, I figured that this was a good opportunity to build a mobile app. &lt;br&gt;&#xA;The app was released to the public in early 2023 and has reached over 500 downloads on every continent. The pace of growth has increased as well, with almost 200 new users joining in the last two months alone. The app has also had a favorable rating on the app store, consitently with 5.0/5.0 stars.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Junior iOS Developer</title>
+      <link>http://localhost:1313/experience/aa/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/aa/</guid>
+      <description>&lt;h1 id=&#34;junior-ios-developer&#34;&gt;Junior iOS Developer&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.alwaysart.com/&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;AlwaysArt is a startup based in California looking to connect artists, galleries, and collectors. The founder reached out to my dad (also a software engineer) to see if he knew anyone who would work on an internal inventory management app for the company over the summer of 2022. Since I was in the middle of learning Swift, my dad suggested that I could do it. &lt;br&gt;&#xA;I built the app in Swift and SwiftUI, interfacing with the live production backend (running on Ruby on Rails). The app helped increase inventory management from around 200 items to over 20000 utilizing QR code scanning and a responsive UI. &lt;br&gt;&#xA;Since the release of the internal app, I&amp;rsquo;ve been working on creating an app for collectors and galleries to view their artworks and acquire new pieces. It&amp;rsquo;s been a very long journey and a large project, but the app has plans to release to the public in late 2024 or early 2025.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

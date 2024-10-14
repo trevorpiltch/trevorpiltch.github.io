@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+      <head>
+    <meta name="generator" content="Hugo 0.135.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="Software Engineering Student"/>
+
+    <title>Trevor Piltch</title>
+
+    <style data-generator="critical-css"></style>
+
+    <link rel="stylesheet" type="text/css" href="/css/bundle.css" />
+  </head>
+
+ 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    startup: {
+    ready() {
+      var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].color = '#D3C6AA'; 
+      MathJax.startup.defaultReady();
+    }
+  }
+  };
+</script>
+
+  </head>
+
+  <body>
+        <header class="header fixed-top rad-animation-group" id="header">
+      <div class="container rad-fade-in">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <div class="container-fluid">
+            <a class="navbar-brand mx-auto" href="/">
+              <span>Trevor</span>
+              <span>Piltch</span>
+            </a>   
+          </div>
+            <ul class="navbar-nav ml-lg-auto">
+            
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#project"
+                >PROJECTS</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#blog"
+                >BLOG</a
+              >
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+
+
+    <section id="breadcrumb-bar" class="breadcrumb-bar container">
+        <ul class="breadcrumbs"><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item current">Bessel Function of the First Kind</li></ul>
+</section>
+
+    <section
+      id="blog-single"
+      class="section section--border-bottom rad-animation-group"
+    >
+      <div class="container">
+        <aside id="meta" class="light-border-bottom">
+          <div>
+            <section>
+              <h4 id="date">Published on Wed May 1, 2024 -</h4>
+              <h4 id="wordcount">484 Words</h4>
+            </section>
+          </div>
+        </aside>
+
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="col-12"><h1 id="the-bessel-function-of-the-first-kind">The Bessel Function of the First Kind</h1>
+<p>I took differential equations in the winter of my first year at McGill. I absolutely loved that class and spent a lot of time after class talking to the professor and spending time learning other aspects of this field of math. One day, we learned about the Frobenius method of solving diff-eqs. Curious, I looked up what I could apply the method to, and found the Bessel Function. I tried deriving the function and wrote up my work below.</p>
+<h3 id="derivation">Derivation</h3>
+<p>Let&rsquo;s analyze Bessel&rsquo;s equation. It&rsquo;s common to refer to the parameter p as the <em>order</em> of the equation.:
+</p>
+$$x^2y''+xy'+(x^2-p^2)y=0$$<p>
+To start, let&rsquo;s get this in standard form by dividing by $x^2$:
+</p>
+$$ y''+\frac{1}{x}y'+(1-\frac{p^2}{x^2})y=0$$<p>
+This should be ringing some alarm bells with <em>x</em> in the denominator, as $x=0$ makes this undefined. So we say $x_0=0$ is a <em>singular point</em>. Let&rsquo;s check if it&rsquo;s regular by checking $x\frac{Q}{P}$ and $x^2\frac{R}{P}$ :
+</p>
+$$x\frac{Q}{P}=1$$$$x^2\frac{R}{P}=x^2-p^2$$<p>
+These are both analytic functions and are well defined for all x in $\mathbb{R}$. Notice that this means $x=0$ is a <em>regular singular point</em>.
+The next step in analyzing this ODE is to find the roots of the indicial equation. Recall the indicial equation is defined as
+$F(r)=r(r-1)+b_0r+c_0=0$ Using the expressions from $x\frac{Q}{P}$ and $x^2\frac{R}{P}$, we get the expansions:
+</p>
+$$x\frac{Q}{P}=1+(0)O(x)$$$$x^2\frac{R}{P}=-p^2+0x+x^2+(0)O(x^3)$$<p>
+From these, we can see that $b_0=1$ and $c_0=-p^2$ and the only other non-zero coefficient is $c_2=1$. Let&rsquo;s plug this back into our indicial equation and solve for the roots.
+</p>
+$$F(r)=r(r-1)+r-p^2$$$$=r^2-r+r-p^2$$<p>
+$r^2-p^2$ $\Rightarrow r=± p$
+For this example, we&rsquo;re only going to take $r=p$ but the process for $r=-p$ is the same. Let&rsquo;s calculate the first few coefficients using the <em>method of frobenius</em>:
+</p>
+$$a_n=\frac{-1}{F(n+p)}\sum_{k=0}^{n-1}a_k[(k+p)b_{n-k}+c_{n-k}]$$$$a_1=\frac{-1}{F(1+p)}(0)=0$$$$a_2=\frac{-1}{F(2+p)}\sum_{k=0}^{1}a_k[(k+p)b_{2-k}+c_{2-k}]=\frac{-1}{F(2+p)}a_0$$$$a_3=\frac{-1}{F(3+p)}\sum_{k=0}^{2}a_k[(k+p)b_{3-k}+c_{3-k}]=\frac{-1}{F(3+p)}a_1$$$$a_4=\frac{-1}{F(4+p)}\sum_{k=0}^{4}a_k[(k+p)b_{4-k}+c_{4-k}]=\frac{-1}{F(4+p)}a_2$$<p>Hopefully you&rsquo;ve noticed a pattern here. The general term of $a_n$ is given by
+</p>
+$$a_n=\frac{-a_{n-2}}{F(n+p)}$$<p>
+However, we can simplify this quite nicely by noticing that all the odd coefficients depend on $a_1$ which is identically equal to $0$. So we can reindex to only take the odd indicies and evaluate our function $F(n+p)$:
+</p>
+$$a_{2n}=\frac{-a_{2n-2}}{4n(n+p)}$$<p>
+Let&rsquo;s find the first few terms explicitly:
+</p>
+$$a_2=\frac{-a_0}{4*1(1+p)}$$$$a_4=\frac{-a_2}{4*2*(2+p)}=\frac{(-1)^2a_0}{4^22*1(1+p)(2+p)}$$$$\vdots$$$$a_{2n}=\frac{(-1)^ka_0}{4^kk!(1+p)\dots(2+p)}$$<p>
+To simplify our calculations, we introduce the gamma function, which is a generalized factorial where $\Gamma(x+1)=x!$:
+</p>
+$$\Gamma(x)=\int_0^{\infty}e^{-t}t^{x-1}dt$$<p>
+We&rsquo;ll replace that in our expression to get:
+</p>
+$$a_{2n}=\frac{(-1)^ka_0}{4^k\Gamma(k+1)\Gamma(k+p+1)}$$<p>
+To get the Bessel function, we&rsquo;ll take $a_0=\frac{1}{2^p\Gamma(p+1)}$:
+</p>
+$$a_{2n}=\frac{(-1)^ka_0}{4^k2^p\Gamma(k+1)\Gamma(k+p+1)}$$<p>
+When we plug this into our series solution $y(x)$, we get
+</p>
+$$y(x)=\sum_{n=0}^{\infty}\frac{(-1)^n}{\Gamma(n+1)\Gamma(p+k+1)}(\frac{x}{2})^{2n+p}$$<p>
+And thus we have arrived at the Bessel function of the first kind, normally denoted by $J_1(x)$:
+</p>
+$$J_1(x)=\sum_{n=0}^{\infty}\frac{(-1)^n}{\Gamma(n+1)\Gamma(p+k+1)}(\frac{x}{2})^{2n+p}$$<p>As you can see, this is a pretty complicated function, but it has some nice practical uses. For example, it can be used to model vibrations in a circular drum. It&rsquo;s also useful for solving a whole host of ODEs in cylindrical coordinates and is a key part of the solution to the wave equation in cylindrical coordinates. Overall, it&rsquo;s a pretty cool function and I&rsquo;m glad I fell down the Wikipedia rabbit hole to learn about it.</p>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+          Made by Trevor, with Caffeine. Based on the <a href="https://themes.gohugo.io/themes/adritian-free-hugo-theme/">Adritian Free</a> theme for Hugo.
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+  </body>
+</html>
+
