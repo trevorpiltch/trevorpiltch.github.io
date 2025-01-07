@@ -108,7 +108,7 @@
               <a href="http://localhost:1313/project/omnisync/">
                 <div class="project__title">OmniSync</div>
                 <div class="project__description">
-                  A forked version of an GitHub issue to OmniFocus tool that can important any HTTPS source into an OmniFocus item.
+                  Sync OmniFocus with issue trackers like GitHub and Shortcut.
                 </div>
               </a>
             </div>
@@ -142,14 +142,16 @@
           <div class="col-12 col-md-7 mt-7 mt-sm-0">
             <h1 id="omnisync">OmniSync</h1>
 <p><a href="https://github.com/trevorpiltch/omnifocus-sync">Repo</a> <br>
-This is a forked repo from the original project <a href="https://github.com/mikerhodes/github-to-omnifocus">here</a> which only allowed imports from GitHub. I wanted to add other sources, so I forked the repo (under the ISC license) and began modifying the original Go scripts.</p>
+This is a Go-based CLI utility that seamlessly integrates OmniFocus with enterprise platforms (e.g.
+GitHub, Shortcut), featuring comprehensive error handling and close to 90% test coverage</p>
 <h3 id="highlights">Highlights</h3>
 <ul>
 <li><strong>Software:</strong> Written in Go, utilizing existing open source code</li>
-<li><strong>Features:</strong> Import Shortcut and GitHub issues to a specific OmniFocus project</li>
+<li><strong>Features:</strong> Import issues from any source to a specific OmniFocus project</li>
+<li><strong>Technical:</strong> Includes JSON parsing, unit testing, and api handling</li>
 </ul>
 <h3 id="personal-impact">Personal Impact</h3>
-<p>I don&rsquo;t think I use a piece of software more than I use <a href="https://www.omnigroup.com/omnifocus">OmniFocus</a>. Since 2019, I&rsquo;ve kept every actionable item in my life organized in this app. As I got more into software, I realized there wasn&rsquo;t an easy way to sync the various bug tracking tools to OmniFocus. I found a script written <a href="https://github.com/mikerhodes/github-to-omnifocus">here</a> (released under the open source ISC license) for syncing GitHub issues to OmniFocus. I modified the code to accept inputs from the Shortcut tool and am working to add other sources as well.</p>
+<p>I don&rsquo;t think I use a piece of software more than I use <a href="https://www.omnigroup.com/omnifocus">OmniFocus</a>. Since 2019, I&rsquo;ve kept every actionable item in my life organized in this app. As I got more into software, I realized there wasn&rsquo;t an easy way to sync the various bug tracking tools to OmniFocus. I found a script written <a href="https://github.com/mikerhodes/github-to-omnifocus">here</a> (released under the open source ISC license) for syncing GitHub issues to OmniFocus. I loved the tool, although found it restrictive with only importing GitHub issues and only allowing one project at a time. So, I taught myself Go and wrote this project. I now use it everyday (as a toolbar button in OmniFocus) to stay in sync between OmniFocus, GitHub Issues, and Shortcut Stories.</p>
 
           </div>
         </div>
