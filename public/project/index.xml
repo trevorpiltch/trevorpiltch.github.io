@@ -6,8 +6,15 @@
     <description>Recent content in Projects on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CoolSupplies</title>
+      <link>http://localhost:1313/project/cool_supplies/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/cool_supplies/</guid>
+      <description>&lt;h1 id=&#34;coolsupplies&#34;&gt;CoolSupplies&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/F2024-ECSE223/ecse223-group-project-p13&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This project was the main content of the my course in model-based programming. I was part of a group of seven students, and unanimously voted as the technical leader. For the application, we used Java, Gradle, Cucumber, and JavaFX. Most of the group had never completed an application this large before, and I took it upon myself to teach them some critical software engineering skills. I taught them the basics of git, Java, and how to create an intuitive UI in JavaFX (and not use the default styling).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>PomoBit</title>
       <link>http://localhost:1313/project/pomo_bit/</link>
