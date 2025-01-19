@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On the Launch of Robot Forest</title>
+      <link>http://localhost:1313/blog/19_01/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/19_01/</guid>
+      <description>&lt;h1 id=&#34;release-early-and-often&#34;&gt;Release Early and Often.&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to 2025! I&amp;rsquo;m a couple weeks late, but one of my resolutions was to start writing more and this represents my first step in that journey.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s been a busy start to 2025 and I just recently launched my new developer studio &lt;a href=&#34;https://robotforest.dev&#34;&gt;Robot Forest&lt;/a&gt;. I&amp;rsquo;ve been meaning to launch this thing for years, and finally got the confidence to do so over the holidays. I also finally submitted version 3.0 of my app, &lt;a href=&#34;https://wheels.trevorpiltch.com&#34;&gt;Wheels&lt;/a&gt;, to the app store. This has been one of those projects that I&amp;rsquo;ve been consistently tweaking for almost two years. Every time I thought I&amp;rsquo;d release it, I&amp;rsquo;d come up with another feature to add, implement it, and then repeat the process. With something like this, I think I&amp;rsquo;ve learned that the most important thing is to follow the old software mantra, release early and often. For the longest time, I was the only one with eyes on this version and was overly critical of every detail. By releasing it to the public, I&amp;rsquo;ve already gotten new feedback and praise about the new features. While not the biggest achievement so far, I&amp;rsquo;m definitely proud of this one and excited to break the cycle of feature bloating.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Bessel Function of the First Kind</title>
       <link>http://localhost:1313/blog/bessel_function/</link>
