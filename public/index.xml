@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Founder</title>
+      <link>http://localhost:1313/experience/robot_forest/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/robot_forest/</guid>
+      <description>&lt;h1 id=&#34;robot-forest&#34;&gt;Robot Forest&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://robotforest.dev&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;At Robot Forest, we believe that mobile applications should be more than just functional tools – they should be thoughtfully crafted experiences that seamlessly integrate into people&amp;rsquo;s lives. Our studio was born from a vision to bridge the gap between technological innovation and human-centered design, creating mobile solutions that feel as natural and intuitive as walking through a forest.&lt;/p&gt;&#xA;&lt;p&gt;I founded Robot Forest with a simple yet powerful mission: to build mobile applications that make a genuine difference in how people interact with technology. Drawing from years of experience in mobile development, I saw an opportunity to create a studio that approaches each project not just as a technical challenge, but as a chance to enhance how people live, work, and connect. Our name reflects this philosophy – like a forest that grows and adapts while maintaining its core essence, we build applications that are both dynamic and deeply rooted in purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>On the Launch of Robot Forest</title>
       <link>http://localhost:1313/blog/19_01/</link>
       <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
@@ -28,13 +35,6 @@
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/pomo_bit/</guid>
       <description>&lt;h1 id=&#34;pomobit&#34;&gt;PomoBit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Pomo-Bit&#34;&gt;Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the world of digital distractions, sometimes the best solution is a physical one. This project transforms a &lt;a href=&#34;https://microbit.org/&#34;&gt;Micro:Bit v2&lt;/a&gt; into a dedicated Pomodoro timer, bringing the power of focused work sessions right to your desk.&lt;/p&gt;&#xA;&lt;h3 id=&#34;highlights&#34;&gt;Highlights&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hardware:&lt;/strong&gt; Utilizes the Micro:Bit v2 platform&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Software:&lt;/strong&gt; Written in C using open source HAL libraries&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Functionality:&lt;/strong&gt; Alternates between 25-minute work sessions and 5-minute breaks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;personal-impact&#34;&gt;Personal Impact&lt;/h3&gt;&#xA;&lt;p&gt;Since implementing this timer, I&amp;rsquo;ve noticed that I&amp;rsquo;m more deliberate with my breaks. Before, I used a phone or mac app to track my breaks and ended up wasting my time on email or social media. This provides a visual and tactile separation between work time and break time.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lead Mobile Developer</title>
-      <link>http://localhost:1313/experience/aa/</link>
-      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/aa/</guid>
-      <description>&lt;h1 id=&#34;lead-mobile-developer&#34;&gt;Lead Mobile Developer&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.alwaysart.com/&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;AlwaysArt is a startup based in California looking to connect artists, galleries, and collectors. I built their internal app in Swift and SwiftUI, interfacing with the live production backend (running on Ruby on Rails). The app helped increase inventory management from around 200 items to over 20000 utilizing QR code scanning and a responsive UI. &lt;br&gt;&#xA;When the company wanted to release their mobile application, the CEO hired me to build it for them. I expanded the iOS application to include a consumer facing side, that includes an artwork photo gallery, artwork lookup, and full account management. I also added system integration through widgets and spotlight to enhance the user experience. &lt;br&gt;&#xA;I then taught myself JetPack compose and Kotlin to implement the app for android devices. This was a fun challenge, as I had never done android development before. The android app has feature parity with the iOS app, and includes the same system integrations, providing a consistent look and feature set.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OmniSync</title>
@@ -98,6 +98,13 @@
       <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/labs/</guid>
       <description>&lt;h1 id=&#34;labs&#34;&gt;Labs&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/trevorpiltch/Labs&#34;&gt;Repo&lt;/a&gt; &lt;br&gt;&#xA;Have you ever found yourself stuck in a cycle of passive learning, endlessly consuming books and videos without making tangible progress? I&amp;rsquo;ve been there too. This project is my answer to that common pitfall.&lt;/p&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;This repository serves as my personal &amp;ldquo;lab&amp;rdquo; for learning. It&amp;rsquo;s a curated collection of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Projects:&lt;/strong&gt; applications built from tutorials&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scripts:&lt;/strong&gt; small, focused code snippets to test ideas&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;current-repo&#34;&gt;Current Repo&lt;/h3&gt;&#xA;&lt;p&gt;Currently, the repository contains the following repos: &lt;br&gt;&#xA;&lt;a href=&#34;https://github.com/trevorpiltch/Depot-Tutorial/tree/76b1f65ce90b76eb41eec5750ddd0138b58d8f59&#34;&gt;Depo Tutorial:&lt;/a&gt; the demo application &lt;a href=&#34;https://pragprog.com/titles/rails6/agile-web-development-with-rails-6/#resource&#34;&gt;Agile Web Development with Rails 6&lt;/a&gt; which I used to teach myself Ruby and Ruby on Rails.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lead Mobile Developer</title>
+      <link>http://localhost:1313/experience/aa/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/aa/</guid>
+      <description>&lt;h1 id=&#34;lead-mobile-developer&#34;&gt;Lead Mobile Developer&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.alwaysart.com/&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;AlwaysArt is a startup based in California looking to connect artists, galleries, and collectors. I built their internal app in Swift and SwiftUI, interfacing with the live production backend (running on Ruby on Rails). The app helped increase inventory management from around 200 items to over 20000 utilizing QR code scanning and a responsive UI. &lt;br&gt;&#xA;When the company wanted to release their mobile application, the CEO hired me to build it for them. I expanded the iOS application to include a consumer facing side, that includes an artwork photo gallery, artwork lookup, and full account management. I also added system integration through widgets and spotlight to enhance the user experience. &lt;br&gt;&#xA;I then taught myself JetPack compose and Kotlin to implement the app for android devices. This was a fun challenge, as I had never done android development before. The android app has feature parity with the iOS app, and includes the same system integrations, providing a consistent look and feature set.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

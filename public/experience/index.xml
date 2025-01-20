@@ -6,8 +6,15 @@
     <description>Recent content in Experiences on Trevor Piltch</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Founder</title>
+      <link>http://localhost:1313/experience/robot_forest/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/robot_forest/</guid>
+      <description>&lt;h1 id=&#34;robot-forest&#34;&gt;Robot Forest&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://robotforest.dev&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;p&gt;At Robot Forest, we believe that mobile applications should be more than just functional tools – they should be thoughtfully crafted experiences that seamlessly integrate into people&amp;rsquo;s lives. Our studio was born from a vision to bridge the gap between technological innovation and human-centered design, creating mobile solutions that feel as natural and intuitive as walking through a forest.&lt;/p&gt;&#xA;&lt;p&gt;I founded Robot Forest with a simple yet powerful mission: to build mobile applications that make a genuine difference in how people interact with technology. Drawing from years of experience in mobile development, I saw an opportunity to create a studio that approaches each project not just as a technical challenge, but as a chance to enhance how people live, work, and connect. Our name reflects this philosophy – like a forest that grows and adapts while maintaining its core essence, we build applications that are both dynamic and deeply rooted in purpose.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lead Mobile Developer</title>
       <link>http://localhost:1313/experience/aa/</link>
