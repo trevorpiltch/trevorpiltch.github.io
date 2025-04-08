@@ -26,9 +26,6 @@
     <loc>http://localhost:1313/project/pomo_bit/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/aa/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/project/omnisync/</loc>
     <lastmod>2024-08-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -55,6 +52,9 @@
   </url><url>
     <loc>http://localhost:1313/project/labs/</loc>
     <lastmod>2022-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/experience/aa/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
