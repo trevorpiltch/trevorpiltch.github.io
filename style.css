@@ -211,6 +211,7 @@ body.dark-mode .dark-only {
 .work-info.has-dropdown.dropdown-open .work-dropdown {
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .work-dropdown a {
@@ -370,10 +371,18 @@ body.dark-mode .label-dark {
     }
 
     .contact-words-row {
-        order: -2;
+        display: contents;
+    }
+
+    .contact-words-row .section:first-child {
+        order: -3;
     }
 
     .work-section {
+        order: -2;
+    }
+
+    .contact-words-row .section:last-child {
         order: -1;
     }
 
