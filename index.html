@@ -10,10 +10,10 @@
     <div class="container">
       <header>
         <h1>trevor piltch</h1>
-        <button class="theme-toggle" onclick="toggleTheme()">
-          <img src="assets/svg/dark_mode.svg" alt="Dark mode" class="theme-icon light-only">
-          <img src="assets/svg/lightmode.svg" alt="Light mode" class="theme-icon dark-only">
-        </button>
+        <!-- <button class="theme-toggle" onclick="toggleTheme()"> -->
+        <!--   <img src="assets/svg/dark_mode.svg" alt="Dark mode" class="theme-icon light-only"> -->
+        <!--   <img src="assets/svg/lightmode.svg" alt="Light mode" class="theme-icon dark-only"> -->
+        <!-- </button> -->
       </header>
 
       <div class="content-wrapper">
@@ -170,6 +170,34 @@
       if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
       }
+
+      // Handle dropdown toggle on click/tap
+      const dropdownItems = document.querySelectorAll('.work-info.has-dropdown');
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          // Don't toggle if clicking on a link inside the dropdown
+          if (e.target.closest('.work-dropdown a')) return;
+
+          // Close other dropdowns
+          dropdownItems.forEach(other => {
+            if (other !== item) {
+              other.classList.remove('dropdown-open');
+            }
+          });
+
+          // Toggle this dropdown
+          item.classList.toggle('dropdown-open');
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.work-info.has-dropdown')) {
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
     });
     </script>
   </body>

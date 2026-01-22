@@ -207,7 +207,8 @@ body.dark-mode .dark-only {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.work-info.has-dropdown:hover .work-dropdown {
+.work-info.has-dropdown:hover .work-dropdown,
+.work-info.has-dropdown.dropdown-open .work-dropdown {
     display: flex;
     flex-direction: column;
 }
@@ -385,12 +386,15 @@ body.dark-mode .label-dark {
     }
 
     .work-item {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .badge {
-        margin-left: 0;
+        margin-left: auto;
+        margin-top: 0;
+        flex-basis: 100%;
         margin-top: 8px;
     }
 }
