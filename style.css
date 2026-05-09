@@ -256,4 +256,9 @@ footer {
     width: 90%;
     padding: 32px 0 48px;
   }
+
+  .badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
