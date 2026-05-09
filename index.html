@@ -1,205 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trevor piltch</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>trevor piltch</h1>
-        <!-- <button class="theme-toggle" onclick="toggleTheme()"> -->
-        <!--   <img src="assets/svg/dark_mode.svg" alt="Dark mode" class="theme-icon light-only"> -->
-        <!--   <img src="assets/svg/lightmode.svg" alt="Light mode" class="theme-icon dark-only"> -->
-        <!-- </button> -->
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trevor Piltch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
 
-      <div class="content-wrapper">
-        <section class="section about-section">
-          <h2>About</h2>
-          <p>
-            I'm in my third year studying Software Engineering (B.Eng, Co-op) at <a href="https://mcgill.ca">McGill University</a> in Montreal. I'm originally from Maine and spent a few years studying at <a href="https://exeter.edu">Phillips Exeter Academy</a> in New Hampshire.
-          </p>
-          <p style="margin-top: 20px;">
-            I'm still early in my software career but I've found an interest in mobile development, embedded systems, and operating systems. Curious by nature, I'm always looking to learn new things, whether that's new programming languages, math, or a random physics topic that interests me.
-          </p>
-          <p style="margin-top: 20px;">
-            Outside of academics and software, I spend my time running, skateboarding, and reading old science fiction novels. I also listen to a lot of 80s synth pop and am always looking for new music suggestions.
-          </p>
-        </section>
+    <!-- Header -->
+    <h1 class="site-title">Trevor Piltch</h1>
+    <p class="tagline">Software engineering student based in Montreal.</p>
+    <p class="bio">At <a href="https://mcgill.ca">McGill University</a>, previously at <a href="https://exeter.edu">Phillips Exeter Academy</a>.</p>
+    <p class="contact">Reach out on <a href="mailto:trevor@piltch.com">email</a> or <a href="https://github.com/trevorpiltch">GitHub</a>.</p>
 
-        <div class="contact-words-row">
-          <section class="section">
-            <h2>Contact</h2>
-            <div class="contact-item">
-              <div class="icon-circle">
-                <img src="assets/svg/email.svg" alt="Email" class="icon">
-              </div>
-              <div>
-                <div class="label">Email</div>
-                <div><a href="mailto:trevor@piltch.com">trevor@piltch.com</a></div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="icon-circle">
-                <img src="assets/svg/github.svg" alt="Email" class="icon">
-              </div>
-              <div>
-                <div class="label">GitHub</div>
-                <div><a href="https://github.com/trevorpiltch">trevorpiltch</a></div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="icon-circle">
-                <img src="assets/svg/person.svg" alt="LinkedIn" class="icon">
-              </div>
-              <div>
-                <div class="label">LinkedIn</div>
-                <div><a href="https://linkedin.com/in/trevorpiltch">trevorpiltch</a></div>
-              </div>
-            </div>
-          </section>
+    <!-- Work -->
+    <section>
+      <h2>Work</h2>
 
-          <section class="section">
-            <h2>Words</h2>
-            <div class="words-item">
-              <div class="icon-circle">
-                <img src="assets/svg/thought.svg" alt="Email" class="icon">
-              </div>
-              <div class="words-info">
-                <div class="label">21-04-2023</div>
-                <div><a href="assets/pdfs/meditation.pdf">The Meditation</a></div>
+      <div class="work-entry">
+        <div class="work-top">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/always-art/image_1.webp" alt="Always Art screenshot 1" />
+              <img src="images/always-art/image_2.webp" alt="Always Art screenshot 2" />
+              <img src="images/always-art/image_3.webp" alt="Always Art screenshot 3" />
+              <img src="images/always-art/image_4.webp" alt="Always Art screenshot 4" />
+              <img src="images/always-art/image_5.webp" alt="Always Art screenshot 5" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+          </div>
+          <div class="work-meta">
+            <div class="work-company-row">
+              <img class="work-logo" src="images/alwaysart-iOS-Default-1024x1024@1x.png" alt="Always Art" />
+              <div>
+                <div class="work-company">Always Art</div>
+                <div class="work-role">Mobile Intern</div>
               </div>
             </div>
-            <div class="words-item">
-              <div class="icon-circle">
-                <img src="assets/svg/fn.svg" alt="Email" class="icon">
-              </div>
-              <div class="words-info">
-                <div class="label">01-05-2024</div>
-                <div><a href="assets/pdfs/bessel.pdf">Bessel Function</a></div>
-              </div>
+            <p class="work-desc">Developed iOS and Android apps from scratch for users to explore art galleries, plan fair visits, and manage their collections. Private by default. Built for continuity. Designed to support how art actually lives over time.</p>
+            <div class="badge-row">
+              <a class="badge" href="https://apps.apple.com/us/app/always-art/id6449148969">
+                <img src="images/apple.svg" alt="Download on the App Store" />
+              </a>
+              <a class="badge" href="https://play.google.com/store/apps/details?id=com.alwaysart.android">
+                <img src="images/google.png" alt="Get it on Google Play" />
+              </a>
             </div>
-          </section>
+          </div>
         </div>
-
-        <section class="section work-section">
-          <h2>Work</h2>
-          <div class="work-item">
-            <div class="icon-circle">
-              <img src="assets/images/dark_icon.png" alt="Always Art" class="icon">
-            </div>
-            <div class="work-info has-dropdown">
-              <div class="work-details">
-                <div class="label">Always Art</div>
-                <p>Lead Mobile Developer</p>
-              </div>
-              <div class="work-dropdown">
-                <a href="https://apps.apple.com/us/app/always-art/id6449148969" target="_blank" rel="noopener noreferrer">iOS</a>
-                <a href="https://play.google.com/store/apps/details?id=com.alwaysart.android&hl=en-US&pli=1" target="_blank" rel="noopener noreferrer">Android</a>
-              </div>
-            </div>
-          </div>
-          <div class="work-item">
-            <div class="icon-circle">
-              <img src="assets/images/winterkids.png" alt="WinterKids" class="icon">
-            </div>
-            <div class="work-info has-dropdown">
-              <div class="work-details">
-                <div class="label">WinterKids</div>
-                <p>Lead Mobile Developer</p>
-              </div>
-              <div class="work-dropdown">
-                <a href="https://apps.apple.com/us/app/winterkids/id1445770020" target="_blank" rel="noopener noreferrer">iOS</a>
-                <a href="https://play.google.com/store/apps/details?id=org.winterkids.passport" target="_blank" rel="noopener noreferrer">Android</a>
-              </div>
-            </div>
-            <a href="http://www.maine.gov/governor/mills/news/governor-mills-honors-recipients-2025-governors-award-business-excellence-2025-12-11" class="badge" target="_blank" rel="noopener noreferrer">
-              <img src="assets/svg/trophy.svg" alt="" class="badge-icon">
-              Maine Governor's Award for Business Excellence
-            </a>
-          </div>
-          <div class="work-item">
-            <div class="icon-circle">
-              <img src="assets/images/wheels.png" alt="Email" class="icon">
-            </div>
-            <div class="work-info">
-              <div class="work-details">
-                <div class="label">Wheels</div>
-                <a href="https://wheels.trevorpiltch.com">Founder</a>
-              </div>
-            </div>
-            <a href="https://9to5mac.com/2025/02/01/indie-app-spotlight-wheels/" class="badge" target="_blank" rel="noopener noreferrer">
-              <img src="assets/svg/trophy.svg" alt="" class="badge-icon">
-              Featured on 9to5Mac
-            </a>
-          </div>
-          <div class="work-item">
-            <div class="icon-circle">
-              <img src="assets/images/rocket_team.png" alt="McGill Rocket Team" class="icon">
-            </div>
-            <div class="work-info">
-              <div class="work-details">
-                <div class="label">McGill Rocket Team</div>
-                <a href="https://mcgillrocketteam.com/">Flight Computer Software Lead</a>
-              </div>
-            </div>
-            <a href="https://www.launchcanada.org/lc-2025-highlights" class="badge" target="_blank" rel="noopener noreferrer">
-              <img src="assets/svg/trophy.svg" alt="" class="badge-icon">
-              3rd Place at LC2025
-            </a>
-          </div>
-        </section>
       </div>
-    </div>
 
-    <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
+      <div class="work-entry">
+        <div class="work-top">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/winter-kids/image_1.webp" alt="Winter Kids screenshot 1" />
+              <img src="images/winter-kids/image_2.webp" alt="Winter Kids screenshot 2" />
+              <img src="images/winter-kids/image_3.webp" alt="Winter Kids screenshot 3" />
+              <img src="images/winter-kids/image_4.webp" alt="Winter Kids screenshot 4" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+          </div>
+          <div class="work-meta">
+            <div class="work-company-row">
+              <img class="work-logo" src="images/winterkids-iOS-Default-1024x1024@1x.png" alt="Winter Kids" />
+              <div>
+                <div class="work-company">Winter Kids</div>
+                <div class="work-role">Mobile Developer</div>
+              </div>
+            </div>
+            <p class="work-desc">Native iOS and Android applications to provide special deals and activities for kids in Maine, New Hampshire, and Michigan. Winner of the 2025 Maine Governers Award.</p>
+            <div class="badge-row">
+              <a class="badge" href="https://apps.apple.com/us/app/winterkids/id1445770020">
+                <img src="images/apple.svg" alt="Download on the App Store" />
+              </a>
+              <a class="badge" href="https://play.google.com/store/search?q=Winter%20Kids&c=apps">
+                <img src="images/google.png" alt="Get it on Google Play" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project-entry">
+        <div class="project-title">Wheels</div>
+        <p class="project-desc">Skate tracking and management app, built with Swift and SwiftUI from the ground up. Featured in <a href="https://9to5mac.com/2025/02/01/indie-app-spotlight-wheels/">9to5Mac</a> and a 4.9 star app store rating.</p>
+        <div class="badge-row">
+          <a class="badge" href="https://apps.apple.com/us/app/wheels-skate-tracking-stats/id1667530731">
+            <img src="images/apple.svg" alt="Download on the App Store" />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title"><a href="https://mcgillrocketteam.com/">McGill Rocket Team</a></div>
+        <p class="project-desc">Lead the flight computer software project for a year. Built embedded C and C++ code targetting a STM32 processor. Helped the team finish 3rd at Launch Canada 2025</p>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title">C Compiler</div>
+        <p class="project-desc">Java based C compiler, created for COMP520 at McGill University. Compiles a subset of the C language for the MIPS architecture.</p>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title"><a href="https://trevorpiltch.com/ECSE_316_A4/">Signal Visualizer</a></div>
+        <p class="project-desc">Final project for ECSE316, a simple learning website for others to see how noise cancelling algorithms work.</p>
+      </div>
+    </section>
+
+    <!-- Words -->
+    <section>
+      <h2>Words</h2>
+
+      <div class="word-entry">
+        <div class="word-title"><a href="pdfs/meditation.pdf">Meditation</a></div>
+        <p class="word-desc">Published at Phillips Exeter Academy, my seminal personal essay. Selected from over 300 applications to read aloud at the academy.</p>
+      </div>
+
+      <div class="word-entry">
+        <div class="word-title"><a href="pdfs/bessel.pdf">Bessel Function</a></div>
+        <p class="word-desc">Exploration of the Bessel function during my differential equations class at McGill.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>Made by Trevor, with Caffeine.</footer>
+  <script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const imgs = track.querySelectorAll('img');
+      let index = 0;
+
+      function go(n) {
+        index = (n + imgs.length) % imgs.length;
+        track.style.transform = `translateX(-${index * 150}px)`;
       }
-    }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
-
-      // Handle dropdown toggle on click/tap
-      const dropdownItems = document.querySelectorAll('.work-info.has-dropdown');
-      dropdownItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-          // Don't toggle if clicking on a link inside the dropdown
-          if (e.target.closest('.work-dropdown a')) return;
-
-          // Close other dropdowns
-          dropdownItems.forEach(other => {
-            if (other !== item) {
-              other.classList.remove('dropdown-open');
-            }
-          });
-
-          // Toggle this dropdown
-          item.classList.toggle('dropdown-open');
-        });
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.work-info.has-dropdown')) {
-          dropdownItems.forEach(item => {
-            item.classList.remove('dropdown-open');
-          });
-        }
-      });
+      carousel.querySelector('.prev').addEventListener('click', () => go(index - 1));
+      carousel.querySelector('.next').addEventListener('click', () => go(index + 1));
     });
-    </script>
-  </body>
+  </script>
+</body>
 </html>
-
