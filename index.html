@@ -5,12 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trevor Piltch</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.jpeg">
+  <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
-  <div class="container">
+
+  <!-- Sticky bar. Fades in as the hero scrolls away; the drawing flies into
+       the empty slot on its left. -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="nav-slot" id="nav-slot"></div>
+      <span class="nav-name">Trevor Piltch</span>
+    </div>
+  </header>
+
+  <!-- The drawing lives outside both the hero and the nav so it can travel
+       between them without ever being re-parented. -->
+  <div class="drawing" id="drawing" role="img" aria-label="Drawing of Trevor"></div>
+
+  <section class="hero" id="hero">
+    <div class="hero-slot" id="hero-slot"></div>
+    <div class="hero-copy" id="hero-copy">
+      <button class="replay" id="replay" type="button"><span class="replay-glyph">&#8635;</span> Replay</button>
+      <h1 class="greeting" id="greeting">Hi I'm Trevor!</h1>
+      <a class="scroll-cue" id="scroll-cue" href="#content" aria-label="Scroll to content">&#8595;</a>
+    </div>
+  </section>
+
+  <main class="container" id="content">
 
     <!-- Header -->
-    <h1 class="site-title">Trevor Piltch</h1>
     <p class="tagline">Software engineering student based in Montreal.</p>
     <p class="bio">At <a href="https://mcgill.ca">McGill University</a>, previously at <a href="https://exeter.edu">Phillips Exeter Academy</a>.</p>
     <p class="contact">Reach out on <a href="mailto:trevor@piltch.com">email</a> or <a href="https://github.com/trevorpiltch">GitHub</a>.</p>
@@ -132,10 +156,120 @@
       </div>
     </section>
 
-  </div>
+  </main>
 
   <footer>Made by Trevor, with Caffeine.</footer>
+
+  <script src="sketch-draw.js"></script>
   <script>
+    /* ---------------------------------------------------- draw, then greet */
+    (function () {
+      var stage = document.getElementById('drawing');
+      var copy = document.getElementById('hero-copy');
+      var replayBtn = document.getElementById('replay');
+      var sketch = null;
+
+      function reveal() { copy.classList.add('is-visible'); }
+
+      // The button rides the same fade as the greeting, so a replay hides it
+      // until the pen finishes again -- no need to guard against double clicks.
+      replayBtn.addEventListener('click', function () {
+        if (!sketch) return;
+        copy.classList.remove('is-visible');
+        sketch.replay();
+      });
+
+      fetch('drawing.svg')
+        .then(function (r) {
+          if (!r.ok) throw new Error('could not load drawing.svg (' + r.status + ')');
+          return r.text();
+        })
+        .then(function (text) {
+          var doc = new DOMParser().parseFromString(text, 'image/svg+xml');
+          var svg = doc.querySelector('svg');
+          if (!svg || doc.querySelector('parsererror')) throw new Error('drawing.svg is not a usable SVG');
+
+          svg = document.importNode(svg, true);
+          svg.removeAttribute('data-sketch-draw'); // we drive it ourselves
+          stage.appendChild(svg);
+
+          return SketchDraw.create(svg, {
+            duration: 5000,
+            startOn: 'load',
+            onDone: reveal
+          });
+        })
+        .then(function (d) { sketch = d; })
+        .catch(function (e) {
+          // If the drawing can't play, the greeting still has to show up.
+          console.warn(e.message);
+          reveal();
+        });
+    })();
+
+    /* -------------------------------------- fly the drawing into the nav bar
+       The drawing is fixed-position and sits at the origin; on every frame we
+       interpolate its transform between two empty placeholders, one in the
+       hero and one in the nav bar. Reading both rects live is what keeps this
+       correct through resizes and font loads without any cached geometry. */
+    (function () {
+      var drawing = document.getElementById('drawing');
+      var heroSlot = document.getElementById('hero-slot');
+      var navSlot = document.getElementById('nav-slot');
+      var hero = document.getElementById('hero');
+      var nav = document.getElementById('nav');
+      var copy = document.getElementById('hero-copy');
+
+      var ticking = false;
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+      function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+
+      function apply() {
+        ticking = false;
+
+        var travel = Math.max(1, hero.offsetHeight - nav.offsetHeight);
+        var p = clamp01(window.scrollY / travel);
+
+        var h = heroSlot.getBoundingClientRect();
+        var n = navSlot.getBoundingClientRect();
+        if (!h.width || !n.width) return;
+
+        var scale = lerp(1, n.width / h.width, p);
+        var x = lerp(h.left, n.left, p);
+        // The hero slot keeps rising as the page scrolls, so a plain lerp sends
+        // the drawing up off the top edge and brings it back down. Stopping it
+        // at the docking line means it rises, meets the bar, then shrinks in.
+        var y = Math.max(lerp(h.top, n.top, p), n.top);
+
+        drawing.style.transform =
+          'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px) scale(' + scale.toFixed(4) + ')';
+
+        // The greeting and arrow clear out well before the drawing lands.
+        copy.style.setProperty('--scroll-fade', String(clamp01(1 - p * 2)));
+        nav.style.setProperty('--nav-fade', String(clamp01((p - 0.55) / 0.45)));
+        drawing.classList.toggle('is-docked', p > 0.98);
+      }
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(apply);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      window.addEventListener('load', apply);
+      apply();
+
+      // Once docked, the drawing is the way back to the top.
+      drawing.addEventListener('click', function () {
+        if (!drawing.classList.contains('is-docked')) return;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    /* ------------------------------------------------------------ carousels */
     document.querySelectorAll('.carousel').forEach(carousel => {
       const track = carousel.querySelector('.carousel-track');
       const imgs = track.querySelectorAll('img');

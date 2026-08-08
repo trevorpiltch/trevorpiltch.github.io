@@ -12,10 +12,21 @@
   font-style: italic;
 }
 
+:root {
+  --hero-size: min(400px, 52vmin);
+  --nav-h: 56px;
+  --nav-icon: 34px;
+  --gutter: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,24 +37,198 @@ body {
   line-height: 1.5;
 }
 
-.container {
-  width: 33.333%;
-  margin: 0 auto;
-  padding: 48px 0 64px;
-}
-
 a {
   color: #535DFF;
   text-decoration: none;
 }
 
-/* Header */
-.site-title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 14px;
+/* ------------------------------------------------------------------ nav bar */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid #eee;
+  opacity: var(--nav-fade, 0);
+  pointer-events: none;
 }
 
+.nav-inner {
+  height: 100%;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Empty on purpose: the drawing flies into this space, it is never a child. */
+.nav-slot {
+  width: var(--nav-icon);
+  height: var(--nav-icon);
+  flex-shrink: 0;
+}
+
+.nav-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------- the drawing */
+.drawing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--hero-size);
+  aspect-ratio: 1095 / 1093;
+  transform-origin: 0 0;
+  will-change: transform;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.drawing svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #000000;
+}
+
+.drawing.is-docked {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------- hero */
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: var(--nav-h) var(--gutter) 40px;
+}
+
+/* Reserves the drawing's spot in the hero; the drawing itself is fixed. */
+.hero-slot {
+  width: var(--hero-size);
+  aspect-ratio: 1095 / 1093;
+  flex-shrink: 0;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: var(--scroll-fade, 1);
+}
+
+.greeting {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Nothing to replay without JS, so the button only exists with it. */
+.replay {
+  display: none;
+}
+
+.js .replay {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1;
+  color: #aaa;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+.js .replay:hover {
+  color: #000000;
+}
+
+.js .replay:focus-visible {
+  outline: 2px solid #535DFF;
+  outline-offset: 2px;
+}
+
+.replay-glyph {
+  font-size: 13px;
+  transition: transform 300ms ease;
+}
+
+.js .replay:hover .replay-glyph {
+  transform: rotate(-180deg);
+}
+
+.scroll-cue {
+  font-size: 20px;
+  line-height: 1;
+  color: #000000;
+  margin-top: 10px;
+  animation: nudge 1.8s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(5px); }
+}
+
+/* Held back until the pen finishes. Without JS there is no drawing to wait
+   on, so the copy is simply there from the start. */
+.js .greeting,
+.js .scroll-cue {
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+/* Also toggles visibility so the button cannot be tabbed to while invisible. */
+.js .replay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 900ms ease, visibility 0s linear 900ms;
+}
+
+.js .hero-copy.is-visible .greeting {
+  opacity: 1;
+}
+
+.js .hero-copy.is-visible .replay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 900ms ease, visibility 0s;
+}
+
+.js .hero-copy.is-visible .scroll-cue {
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+/* ------------------------------------------------------------------ layout */
+.container {
+  width: 33.333%;
+  margin: 0 auto;
+  padding: 88px 0 64px;
+}
+
+#content {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Header */
 .tagline {
   font-size: 18px;
   font-weight: bold;
@@ -125,25 +310,6 @@ section {
   align-items: flex-start;
   margin-bottom: 10px;
 }
-
-.work-screenshot {
-  width: 150px;
-  flex-shrink: 0;
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-  min-height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.work-screenshot img {
-  width: 100%;
-  display: block;
-}
-
 
 .work-meta {
   flex: 1;
@@ -254,11 +420,38 @@ footer {
 @media (max-width: 800px) {
   .container {
     width: 90%;
-    padding: 32px 0 48px;
+    padding: 72px 0 48px;
+  }
+
+  .greeting {
+    font-size: 22px;
   }
 
   .badge-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-cue {
+    animation: none;
+  }
+
+  .js .greeting,
+  .js .scroll-cue,
+  .js .replay,
+  .js .hero-copy.is-visible .replay {
+    transition: none;
+  }
+
+  .replay-glyph,
+  .js .replay:hover .replay-glyph {
+    transition: none;
+    transform: none;
   }
 }
