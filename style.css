@@ -17,6 +17,54 @@
   --nav-h: 56px;
   --nav-icon: 34px;
   --gutter: 20px;
+
+  /* Same ink as the drawing: black line on white paper. */
+  --ink: #000000;
+  --ink-2: #4a4a4a;
+  --ink-3: #949494;
+  --rule: rgba(0, 0, 0, 0.14);
+  --paper: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+
+  --link: #555df6;
+  --link-rule: rgba(85, 93, 246, 0.35);
+}
+
+/* Wide-gamut displays get the exact colour; sRGB keeps the hex above. */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --link: color(display-p3 0.333 0.364 0.964);
+    --link-rule: color(display-p3 0.333 0.364 0.964 / 0.35);
+  }
+}
+
+/* ------------------------------------------------------------------- dark
+   Three states to cover: an explicit choice either way, and the default of
+   no choice at all. The media query handles the default and is fenced off
+   from anyone who has explicitly picked light; the attribute rule below
+   repeats the palette so the toggle also wins on a light-set system. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #ededed;
+    --ink-2: #b3b3b3;
+    --ink-3: #7c7c7c;
+    --rule: rgba(255, 255, 255, 0.18);
+    --paper: #121212;
+    --nav-bg: rgba(18, 18, 18, 0.92);
+    --link: #8f95ff;
+    --link-rule: rgba(143, 149, 255, 0.4);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #ededed;
+  --ink-2: #b3b3b3;
+  --ink-3: #7c7c7c;
+  --rule: rgba(255, 255, 255, 0.18);
+  --paper: #121212;
+  --nav-bg: rgba(18, 18, 18, 0.92);
+  --link: #8f95ff;
+  --link-rule: rgba(143, 149, 255, 0.4);
 }
 
 * {
@@ -32,15 +80,82 @@ html {
 body {
   font-family: "iA Writer Duo", "Courier New", Courier, monospace;
   font-size: 13px;
-  background: #ffffff;
-  color: #000000;
+  background: var(--paper);
+  color: var(--ink);
   line-height: 1.5;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 a {
-  color: #535DFF;
+  color: var(--link);
   text-decoration: none;
+  border-bottom: 1px solid var(--link-rule);
+  transition: border-color 150ms ease;
 }
+
+a:hover {
+  border-bottom-color: var(--link);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------ theme toggle */
+/* Nothing to toggle without JS, so the button only exists with it. */
+.theme-toggle {
+  display: none;
+}
+
+.js .theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--ink-3);
+  transition: color 150ms ease;
+}
+
+.js .theme-toggle:hover {
+  color: var(--ink);
+}
+
+.js .theme-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+/* Show the destination, not the current state: moon means "go dark". */
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .icon-moon { display: none; }
+}
+
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+
+:root[data-theme="light"] .icon-sun { display: none; }
+:root[data-theme="light"] .icon-moon { display: block; }
 
 /* ------------------------------------------------------------------ nav bar */
 .nav {
@@ -50,10 +165,10 @@ a {
   right: 0;
   height: var(--nav-h);
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--rule);
   opacity: var(--nav-fade, 0);
   pointer-events: none;
 }
@@ -74,8 +189,9 @@ a {
 }
 
 .nav-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
+  letter-spacing: 0.02em;
 }
 
 /* ------------------------------------------------------------- the drawing */
@@ -95,7 +211,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  color: #000000;
+  color: var(--ink);
 }
 
 .drawing.is-docked {
@@ -147,7 +263,7 @@ a {
   font-family: inherit;
   font-size: 11px;
   line-height: 1;
-  color: #aaa;
+  color: var(--ink-3);
   background: none;
   border: none;
   border-radius: 4px;
@@ -157,11 +273,11 @@ a {
 }
 
 .js .replay:hover {
-  color: #000000;
+  color: var(--ink);
 }
 
 .js .replay:focus-visible {
-  outline: 2px solid #535DFF;
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
@@ -177,7 +293,8 @@ a {
 .scroll-cue {
   font-size: 20px;
   line-height: 1;
-  color: #000000;
+  color: var(--ink);
+  border-bottom: none;
   margin-top: 10px;
   animation: nudge 1.8s ease-in-out infinite;
 }
@@ -218,218 +335,286 @@ a {
 }
 
 /* ------------------------------------------------------------------ layout */
-.container {
+/* One measure shared by the about block, the sections and the footer. */
+.wrap {
   width: 33.333%;
   margin: 0 auto;
-  padding: 88px 0 64px;
+}
+
+.container {
+  padding: 24px 0 64px;
 }
 
 #content {
   scroll-margin-top: var(--nav-h);
 }
 
-/* Header */
-.tagline {
-  font-size: 18px;
+/* About gets the whole screen to itself; the sections below are normal flow. */
+.about {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* No side padding: .wrap must resolve against the same box as .container,
+     or the about copy sits a few pixels off the sections below it. */
+  padding: calc(var(--nav-h) + 32px) 0 56px;
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+/* ------------------------------------------------------------------- about */
+.about-title {
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 4px;
+  line-height: 1.45;
+  margin-bottom: 14px;
+  max-width: 34ch;
+}
+
+.about-body {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  max-width: 58ch;
+  margin-bottom: 14px;
 }
 
 .bio {
-  font-size: 14px;
+  font-size: 13px;
+  color: var(--ink-2);
   margin-bottom: 2px;
 }
 
 .contact {
-  margin-bottom: 32px;
-  font-size: 12px;
+  font-size: 13px;
+  color: var(--ink-2);
 }
 
-/* Section headings */
-h2 {
-  font-size: 17px;
-  font-weight: bold;
-  margin-bottom: 16px;
+.pills-head {
+  margin-top: 44px;
+  margin-bottom: 14px;
 }
 
-section {
-  margin-bottom: 32px;
-}
-
-/* Carousel */
-.carousel {
-  width: 150px;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
-.carousel-track img {
-  width: 150px;
-  flex-shrink: 0;
-  display: block;
-  object-fit: cover;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1;
-  padding: 2px 6px;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.carousel:hover .carousel-btn {
-  opacity: 1;
-}
-
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
-
-/* Work entries */
-.work-entry {
-  margin-bottom: 28px;
-}
-
-.work-top {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.work-meta {
-  flex: 1;
-}
-
-.work-company-row {
-  display: flex;
-  align-items: top;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.work-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.work-company {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.work-role {
-  font-size: 14px;
-  color: #333;
-}
-
-.work-desc {
-  font-size: 12px;
-  line-height: 1.55;
-  margin-bottom: 16px;
-}
-
-.badge-row {
+.pills {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.pills li {
+  display: inline-flex;
   align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 6px 12px 6px 7px;
 }
 
-.badge {
-  display: inline-block;
-  text-decoration: none;
+/* No icon to make room for, so the padding goes back to even. */
+.pills-plain li {
+  padding: 6px 12px;
 }
 
-.badge img {
-  height: 36px;
+/* App icons, pulled from the local .app bundles. */
+.pills img {
+  width: 17px;
+  height: 17px;
   display: block;
+  flex-shrink: 0;
 }
 
-/* Projects */
-.project-entry {
-  margin-bottom: 20px;
+/* Fades up as it comes into view; without JS it is simply already there. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 800ms ease, transform 800ms ease;
 }
 
-.project-title {
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------------------------------------------------------------- sections
+   The label sits on a hairline that runs to the edge, echoing the ground
+   lines under the figure in the drawing. */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
   font-weight: bold;
-  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 28px;
 }
 
-.project-title a {
+.section-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.sub-head {
+  font-size: 11px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  margin-bottom: 18px;
 }
 
-.project-desc {
-  font-size: 12px;
-  line-height: 1.55;
+/* Subsequent subheads need air between them and the entries above. */
+.entry + .sub-head {
+  margin-top: 36px;
+}
+
+/* ----------------------------------------------------------------- entries */
+.entry {
+  margin-bottom: 28px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
   margin-bottom: 6px;
 }
 
-/* Words */
-.word-entry {
-  margin-bottom: 16px;
-}
-
-.word-title {
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-.word-title a {
+.entry-title {
+  font-size: 15px;
   font-weight: bold;
 }
 
-.word-desc {
+/* The bold weight carries the title; the rule only shows on hover. */
+.entry-title a {
+  border-bottom-color: transparent;
+}
+
+.entry-title a:hover {
+  border-bottom-color: var(--link);
+}
+
+.entry-meta {
   font-size: 12px;
-  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.entry-desc {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+/* "App Store" / "repo" pointers under an entry. */
+.entry-links {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.entry-links .sep {
+  color: var(--ink-3);
+  margin: 0 4px;
+}
+
+/* Awards and honours, on their own line under the title. The only warm
+   colour on the page, kept faint so it reads as highlighter, not a badge. */
+.entry-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+}
+
+/* ------------------------------------------------------- squiggly outlines
+   The wobble comes from an SVG displacement filter, which would smear any
+   text it touched -- so the outline lives on a pseudo-element of its own and
+   the label sits above it, untouched. The lopsided radii do the rest: they
+   are the classic four-corner trick for a box that looks sketched. */
+.pills li,
+.tag {
+  position: relative;
+  color: var(--ink-2);
+}
+
+.pills li::before,
+.tag::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Behind the label, so the outline can never paint over its own text. */
+  z-index: -1;
+  border: 1.6px solid currentColor;
+  /* Kept well under the box height. Radii larger than the box get scaled
+     down proportionally, which flattens the asymmetry into a plain rect. */
+  border-radius: 16px 5px 13px 6px / 6px 13px 5px 16px;
+  filter: url(#squiggle);
+  pointer-events: none;
+}
+
+/* Alternating radii keep neighbouring boxes from looking stamped from one
+   mould, since they all sample the same noise field. */
+.pills li:nth-child(even)::before,
+.entry:nth-of-type(even) .tag::before {
+  border-radius: 6px 13px 5px 16px / 16px 5px 13px 6px;
+}
+
+/* Keeps the filter definition out of the layout. */
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /* Footer */
 footer {
   text-align: center;
   font-size: 11px;
-  color: #aaa;
-  margin-top: 48px;
-  margin-bottom: 16px;
+  color: var(--ink-3);
+  padding: 32px 0 24px;
+  border-top: 1px solid var(--rule);
 }
 
 @media (max-width: 1200px) {
-  .container {
+  .wrap {
     width: 50%;
   }
 }
 
 @media (max-width: 800px) {
-  .container {
+  .wrap {
     width: 90%;
-    padding: 72px 0 48px;
+  }
+
+  .about {
+    padding: calc(var(--nav-h) + 24px) 0 48px;
+  }
+
+  .about-title {
+    font-size: 18px;
   }
 
   .greeting {
     font-size: 22px;
-  }
-
-  .badge-row {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
@@ -453,5 +638,15 @@ footer {
   .js .replay:hover .replay-glyph {
     transition: none;
     transform: none;
+  }
+
+  .js .reveal,
+  .js .reveal.is-in {
+    transition: none;
+    transform: none;
+  }
+
+  body {
+    transition: none;
   }
 }
