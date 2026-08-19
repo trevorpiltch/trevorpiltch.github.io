@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trevor Piltch</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Runs before first paint: an explicit choice has to be on the element
-    // already, or the page flashes the system theme before correcting itself.
     (function () {
       var d = document.documentElement;
       d.className = 'js';
       try {
         var saved = localStorage.getItem('theme');
         if (saved === 'light' || saved === 'dark') d.setAttribute('data-theme', saved);
-      } catch (e) { /* private mode: fall through to the system setting */ }
+      } catch (e) { /* private mode: fall through to the system setting */}
     })();
   </script>
 </head>
+
 <body>
 
-  <!-- Wobbles the outline of every tag and pill so the boxes look drawn by
-       hand rather than stamped. Applied to a pseudo-element that holds only
-       the border, which keeps the text inside perfectly crisp. -->
   <svg class="svg-defs" aria-hidden="true" focusable="false">
     <filter id="squiggle" x="-12%" y="-35%" width="124%" height="170%">
       <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="2" seed="7" result="noise" />
@@ -30,20 +27,19 @@
     </filter>
   </svg>
 
-  <!-- Sits above the nav rather than inside it, so it stays reachable on the
-       hero screen where the nav has not faded in yet. -->
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
-    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round">
       <circle cx="12" cy="12" r="4.2" />
-      <path d="M12 2.6v2.3M12 19.1v2.3M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.6 12h2.3M19.1 12h2.3M4.4 19.6l1.6-1.6M18 6l1.6-1.6" />
+      <path
+        d="M12 2.6v2.3M12 19.1v2.3M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.6 12h2.3M19.1 12h2.3M4.4 19.6l1.6-1.6M18 6l1.6-1.6" />
     </svg>
-    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linejoin="round">
       <path d="M20.2 14.7A8.3 8.3 0 0 1 9.3 3.8a8.3 8.3 0 1 0 10.9 10.9Z" />
     </svg>
   </button>
 
-  <!-- Sticky bar. Fades in as the hero scrolls away; the drawing flies into
-       the empty slot on its left. -->
   <header class="nav" id="nav">
     <div class="nav-inner">
       <div class="nav-slot" id="nav-slot"></div>
@@ -51,8 +47,6 @@
     </div>
   </header>
 
-  <!-- The drawing lives outside both the hero and the nav so it can travel
-       between them without ever being re-parented. -->
   <div class="drawing" id="drawing" role="img" aria-label="Drawing of Trevor"></div>
 
   <section class="hero" id="hero">
@@ -70,9 +64,19 @@
     <section class="about reveal" id="about">
       <div class="about-inner wrap">
         <h2 class="about-title">Software engineering student based in Montreal.</h2>
-        <p class="about-body">I'm in my fourth year studying Software Engineering (B.Eng, Co-op) at <a href="https://mcgill.ca">McGill University</a> in Montreal. Outside of academics and software, I spend my time running, skateboarding, and reading old science fiction novels. I also listen to a lot of 80s synth pop and am always looking for new music suggestions.</p>
+        <p class="about-body">I'm in my fourth year studying Software Engineering (B.Eng, Co-op) at <a
+            href="https://mcgill.ca">McGill University</a> in Montreal. Outside of academics and software, I spend my
+          time running, skateboarding, and reading old science fiction novels. I also listen to a lot of 80s synth pop
+          and I am always looking for new music suggestions.</p>
         <p class="bio">Previously at <a href="https://exeter.edu">Phillips Exeter Academy</a>.</p>
-        <p class="contact">Reach out on <a href="mailto:trevor@piltch.com">email</a> or <a href="https://github.com/trevorpiltch">GitHub</a>.</p>
+
+        <h3 class="sub-head pills-head">Find me on the interwebs</h3>
+        <ul class="elsewhere">
+          <li><a href="mailto:trevor@piltch.com">Email</a></li>
+          <li><a href="https://github.com/trevorpiltch">GitHub</a></li>
+          <li><a href="https://www.imdb.com/name/nm15792081/">IMDb</a></li>
+          <li><a href="https://makerworld.com/en/@user_3445534594">MakerWorld</a></li>
+        </ul>
 
         <h3 class="sub-head pills-head">Tools</h3>
         <ul class="pills">
@@ -93,144 +97,182 @@
 
     <div class="container wrap">
 
-    <!-- Work -->
-    <section class="section" id="work">
-      <h2 class="section-head"><span>Work</span></h2>
+      <!-- Work -->
+      <section class="section" id="work">
+        <h2 class="section-head"><span>Work</span></h2>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title">Always Art</h4>
-          <span class="entry-meta">Mobile Intern</span>
-        </div>
-        <p class="entry-desc">Developed iOS and Android apps from scratch for users to explore art galleries, plan fair visits, and manage their collections. Private by default. Built for continuity. Designed to support how art actually lives over time.</p>
-        <p class="entry-links">
-          <a href="https://apps.apple.com/us/app/always-art/id6449148969">App Store</a>
-          <span class="sep">&middot;</span>
-          <a href="https://play.google.com/store/apps/details?id=com.alwaysart.android">Google Play</a>
-        </p>
-      </article>
+        <article class="entry entry-work">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/always-art/image_1.webp" alt="Always Art screenshot 1" />
+              <img src="images/always-art/image_2.webp" alt="Always Art screenshot 2" />
+              <img src="images/always-art/image_3.webp" alt="Always Art screenshot 3" />
+              <img src="images/always-art/image_4.webp" alt="Always Art screenshot 4" />
+              <img src="images/always-art/image_5.webp" alt="Always Art screenshot 5" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous screenshot">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next screenshot">&#8250;</button>
+          </div>
+          <div class="entry-body">
+            <div class="entry-head">
+              <h4 class="entry-title">Always Art</h4>
+              <span class="entry-meta">Mobile Intern</span>
+            </div>
+            <p class="entry-desc">Developed iOS and Android apps from scratch for users to explore art galleries, plan
+              fair visits, and manage their collections. Private by default. Built for continuity. Designed to support
+              how art actually lives over time.</p>
+            <p class="entry-links">
+              <a href="https://apps.apple.com/us/app/always-art/id6449148969">App Store</a>
+              <span class="sep">&middot;</span>
+              <a href="https://play.google.com/store/apps/details?id=com.alwaysart.android">Google Play</a>
+            </p>
+          </div>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title">Winter Kids</h4>
-          <span class="entry-meta">Mobile Developer</span>
-        </div>
-        <p class="entry-awards"><span class="tag">&#9733; 2025 Maine Governor's Award</span></p>
-        <p class="entry-desc">Native iOS and Android applications to provide special winter deals and activities for kids in Maine, New Hampshire, and Michigan.</p>
-        <p class="entry-links">
-          <a href="https://apps.apple.com/us/app/winterkids/id1445770020">App Store</a>
-          <span class="sep">&middot;</span>
-          <a href="https://play.google.com/store/search?q=Winter%20Kids&c=apps">Google Play</a>
-        </p>
-      </article>
-    </section>
+        <article class="entry entry-work">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/winter-kids/image_1.webp" alt="Winter Kids screenshot 1" />
+              <img src="images/winter-kids/image_2.webp" alt="Winter Kids screenshot 2" />
+              <img src="images/winter-kids/image_3.webp" alt="Winter Kids screenshot 3" />
+              <img src="images/winter-kids/image_4.webp" alt="Winter Kids screenshot 4" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous screenshot">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next screenshot">&#8250;</button>
+          </div>
+          <div class="entry-body">
+            <div class="entry-head">
+              <h4 class="entry-title">Winter Kids</h4>
+              <span class="entry-meta">Mobile Developer</span>
+            </div>
+            <p class="entry-awards"><span class="tag">&#9733; 2025 Maine Governor's Award</span></p>
+            <p class="entry-desc">Native iOS and Android applications to provide special winter deals and activities for
+              kids in Maine, New Hampshire, and Michigan.</p>
+            <p class="entry-links">
+              <a href="https://apps.apple.com/us/app/winterkids/id1445770020">App Store</a>
+              <span class="sep">&middot;</span>
+              <a href="https://play.google.com/store/search?q=Winter%20Kids&c=apps">Google Play</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
-    <!-- Design team -->
-    <section class="section" id="team">
-      <h2 class="section-head"><span>Design Team</span></h2>
+      <!-- Design team -->
+      <section class="section" id="team">
+        <h2 class="section-head"><span>Design Team</span></h2>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://mcgillrocketteam.com/">McGill Rocket Team</a></h4>
-          <span class="entry-meta">Flight Computer Software Lead</span>
-        </div>
-        <p class="entry-awards"><span class="tag">&#9733; 3rd at Launch Canada 2025</span></p>
-        <p class="entry-desc">Lead the flight computer software project for a year. Built embedded C and C++ code targetting a STM32 processor.</p>
-      </article>
-    </section>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="https://mcgillrocketteam.com/">McGill Rocket Team</a></h4>
+            <span class="entry-meta">Flight Computer Software Lead</span>
+          </div>
+          <p class="entry-awards"><span class="tag">&#9733; 3rd at Launch Canada 2025</span></p>
+          <p class="entry-desc">Lead the flight computer software project for a year. Re-architected the flight computer
+            to run on a real-time operating system, writing embedded C and C++ targetting a STM32 processor.</p>
+          <figure class="entry-figure">
+            <video class="entry-video" controls preload="metadata" playsinline>
+              <source src="images/rocket-team/launch-canada.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="entry-caption">Launch of our 2026 rocket, Luminor. I wasn't lead for this, but my
+              real-time operating system first flew here.</figcaption>
+          </figure>
+        </article>
+      </section>
 
-    <!-- Personal projects -->
-    <section class="section" id="projects">
-      <h2 class="section-head"><span>Personal Projects</span></h2>
+      <section class="section" id="school">
+        <h2 class="section-head">School</h2>
 
-      <h3 class="sub-head">Software</h3>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title">C Compiler</h4>
+          </div>
+          <p class="entry-desc">Java based compiler for the C language, from <a
+              href="https://coursecatalogue.mcgill.ca/courses/comp-520/">COMP520: Compiler Design</a>. Compiles a subset
+            of C for the MIPS architecture.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://wheels.trevorpiltch.com">Wheels</a></h4>
-        </div>
-        <p class="entry-desc">Skate tracking and management app, built with Swift and SwiftUI from the ground up. Featured in <a href="https://9to5mac.com/2025/02/01/indie-app-spotlight-wheels/">9to5Mac</a> and a 4.9 star app store rating.</p>
-        <p class="entry-links"><a href="https://apps.apple.com/us/app/wheels-skate-tracking-stats/id1667530731">App Store</a></p>
-      </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a
+                href="https://github.com/F2024-ECSE223/ecse223-group-project-p13">CoolSupplies</a></h4>
+          </div>
+          <p class="entry-awards"><span class="tag">&#9733; Best class project</span></p>
+          <p class="entry-desc">Group project for <a href="https://coursecatalogue.mcgill.ca/courses/ecse-223/">ECSE223:
+              Model Based Programming</a>. Presented in front of the class, and was voted best demo by both the students and professor.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://github.com/trevorpiltch/Grovers-Algorithm">Grover's Quantum Search Algorithm</a></h4>
-        </div>
-        <p class="entry-desc">Implementation of Grover's algorithm, which finds an entry in an unsorted list in roughly the square root of the number of entries.</p>
-      </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="https://trevorpiltch.com/ECSE_316_A4/">Signal Visualizer</a></h4>
+          </div>
+          <p class="entry-desc">Final project for <a
+              href="https://coursecatalogue.mcgill.ca/courses/ecse-316/index.html">ECSE316: Signals and Networks</a>, a
+            simple learning website for others to see how noise cancelling algorithms work.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://github.com/trevorpiltch/omnifocus-sync">OmniSync</a></h4>
-        </div>
-        <p class="entry-desc">Sync tasks to OmniFocus.</p>
-      </article>
+      </section>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://github.com/trevorpiltch/Pomo-Bit">PomoBit</a></h4>
-        </div>
-        <p class="entry-desc">Pomodoro timer for the Microbit.</p>
-      </article>
+      <!-- Personal projects -->
+      <section class="section" id="projects">
+        <h2 class="section-head"><span>Personal Projects</span></h2>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://github.com/trevorpiltch/embedded_template">Rust template for Microbit v2</a></h4>
-        </div>
-        <p class="entry-desc">Starter project for writing embedded Rust on the Microbit v2.</p>
-      </article>
+        <h3 class="sub-head">Software</h3>
 
-      <h3 class="sub-head">School</h3>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="https://wheels.trevorpiltch.com">Wheels</a></h4>
+          </div>
+          <p class="entry-desc">Skate tracking and management app, built with Swift and SwiftUI from the ground up.
+            Featured in <a href="https://9to5mac.com/2025/02/01/indie-app-spotlight-wheels/">9to5Mac</a> and a 4.9 star
+            app store rating.</p>
+          <p class="entry-links"><a href="https://apps.apple.com/us/app/wheels-skate-tracking-stats/id1667530731">App
+              Store</a></p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title">C Compiler</h4>
-        </div>
-        <p class="entry-desc">Java based compiler for the C language, from <a href="https://coursecatalogue.mcgill.ca/courses/comp-520/">COMP520: Compiler Design</a>. Compiles a subset of C for the MIPS architecture.</p>
-      </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="https://github.com/trevorpiltch/Grovers-Algorithm">Grover's Quantum Search
+                Algorithm</a></h4>
+          </div>
+          <p class="entry-desc">Implementation of Grover's algorithm, which finds an entry in an unsorted list in
+            roughly the square root of the number of entries.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://github.com/F2024-ECSE223/ecse223-group-project-p13">CoolSupplies</a></h4>
-        </div>
-        <p class="entry-awards"><span class="tag">&#9733; Best class project</span></p>
-        <p class="entry-desc">Group project for <a href="https://coursecatalogue.mcgill.ca/courses/ecse-223/">ECSE223: Model Based Programming</a>.</p>
-      </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="https://github.com/trevorpiltch/omnifocus-sync">OmniSync</a></h4>
+          </div>
+          <p class="entry-desc">Sync tasks to OmniFocus.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="https://trevorpiltch.com/ECSE_316_A4/">Signal Visualizer</a></h4>
-        </div>
-        <p class="entry-desc">Final project for ECSE316, a simple learning website for others to see how noise cancelling algorithms work.</p>
-      </article>
 
-      <h3 class="sub-head">Hardware</h3>
+        <h3 class="sub-head">Hardware</h3>
 
-      <article class="entry">
-        <p class="entry-desc">Currently learning my way into hardware &mdash; projects to come.</p>
-      </article>
-    </section>
+        <article class="entry">
+          <p class="entry-desc">Currently learning my way into hardware.</p>
+        </article>
+      </section>
 
-    <!-- Words -->
-    <section class="section" id="words">
-      <h2 class="section-head"><span>Words</span></h2>
+      <!-- Words -->
+      <section class="section" id="words">
+        <h2 class="section-head"><span>Words</span></h2>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="pdfs/meditation.pdf">Meditation</a></h4>
-        </div>
-        <p class="entry-awards"><span class="tag">&#9733; Shannon Nissa Bailey Powers Meditations Book</span></p>
-        <p class="entry-desc">Published at Phillips Exeter Academy, my seminal personal essay. Selected from over 300 applications to read aloud at the academy.</p>
-      </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="pdfs/meditation.pdf">Meditation</a></h4>
+          </div>
+          <p class="entry-awards"><span class="tag">&#9733; Published in the Shannon Powers Meditations Book</span></p>
+          <p class="entry-desc">Published at Phillips Exeter Academy, my seminal personal essay. Selected from over 300
+            applications to read aloud at the academy and get published.</p>
+        </article>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h4 class="entry-title"><a href="pdfs/bessel.pdf">Bessel Function</a></h4>
-        </div>
-        <p class="entry-desc">Exploration of the Bessel function during my differential equations class at McGill.</p>
-      </article>
-    </section>
+        <article class="entry">
+          <div class="entry-head">
+            <h4 class="entry-title"><a href="pdfs/bessel.pdf">Bessel Function</a></h4>
+          </div>
+          <p class="entry-desc">Exploration of the Bessel function during my differential equations class at McGill.</p>
+        </article>
+      </section>
 
     </div><!-- /.container -->
 
@@ -247,7 +289,7 @@
       var replayBtn = document.getElementById('replay');
       var sketch = null;
 
-      function reveal() { copy.classList.add('is-visible'); }
+      function reveal() {copy.classList.add('is-visible');}
 
       // The button rides the same fade as the greeting, so a replay hides it
       // until the pen finishes again -- no need to guard against double clicks.
@@ -277,7 +319,7 @@
             onDone: reveal
           });
         })
-        .then(function (d) { sketch = d; })
+        .then(function (d) {sketch = d;})
         .catch(function (e) {
           // If the drawing can't play, the greeting still has to show up.
           console.warn(e.message);
@@ -300,8 +342,8 @@
 
       var ticking = false;
 
-      function lerp(a, b, t) { return a + (b - a) * t; }
-      function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+      function lerp(a, b, t) {return a + (b - a) * t;}
+      function clamp01(v) {return v < 0 ? 0 : v > 1 ? 1 : v;}
 
       function apply() {
         ticking = false;
@@ -335,7 +377,7 @@
         requestAnimationFrame(apply);
       }
 
-      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('scroll', onScroll, {passive: true});
       window.addEventListener('resize', onScroll);
       window.addEventListener('load', apply);
       apply();
@@ -343,9 +385,24 @@
       // Once docked, the drawing is the way back to the top.
       drawing.addEventListener('click', function () {
         if (!drawing.classList.contains('is-docked')) return;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top: 0, behavior: 'smooth'});
       });
     })();
+
+    /* ------------------------------------------------------------ carousels */
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const imgs = track.querySelectorAll('img');
+      let index = 0;
+
+      function go(n) {
+        index = (n + imgs.length) % imgs.length;
+        track.style.transform = `translateX(-${index * 150}px)`;
+      }
+
+      carousel.querySelector('.prev').addEventListener('click', () => go(index - 1));
+      carousel.querySelector('.next').addEventListener('click', () => go(index + 1));
+    });
 
     /* ------------------------------------------------------- theme toggle
        No stored choice means the page keeps following the OS, including if
@@ -370,7 +427,7 @@
       btn.addEventListener('click', function () {
         var next = effective() === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) { /* not fatal */ }
+        try {localStorage.setItem('theme', next);} catch (e) { /* not fatal */}
         sync();
       });
 
@@ -387,9 +444,9 @@
     (function () {
       var els = document.querySelectorAll('.reveal');
       function showAll() {
-        Array.prototype.forEach.call(els, function (el) { el.classList.add('is-in'); });
+        Array.prototype.forEach.call(els, function (el) {el.classList.add('is-in');});
       }
-      if (!('IntersectionObserver' in window)) { showAll(); return; }
+      if (!('IntersectionObserver' in window)) {showAll(); return;}
 
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
@@ -397,10 +454,11 @@
           e.target.classList.add('is-in');
           io.unobserve(e.target); // one-way: no re-fade on the way back up
         });
-      }, { threshold: 0.15 });
+      }, {threshold: 0.15});
 
-      Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+      Array.prototype.forEach.call(els, function (el) {io.observe(el);});
     })();
   </script>
 </body>
+
 </html>

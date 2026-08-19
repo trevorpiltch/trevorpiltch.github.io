@@ -388,9 +388,19 @@ a:focus-visible {
   margin-bottom: 2px;
 }
 
-.contact {
+/* Where to find him, run inline and separated by middots. */
+.elsewhere {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   font-size: 13px;
-  color: var(--ink-2);
+}
+
+.elsewhere li + li::before {
+  content: "\00B7";
+  color: var(--ink-3);
+  margin: 0 10px;
 }
 
 .pills-head {
@@ -528,6 +538,84 @@ a:focus-visible {
   margin: 0 4px;
 }
 
+/* Work entries put a screenshot carousel alongside the copy. */
+.entry-work {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.carousel {
+  width: 150px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 300ms ease;
+}
+
+.carousel-track img {
+  width: 150px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--nav-bg);
+  color: var(--ink);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 6px 8px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.carousel:hover .carousel-btn,
+.carousel-btn:focus-visible {
+  opacity: 1;
+}
+
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
+
+/* Landscape footage, so it takes the column rather than a thumbnail slot. */
+.entry-figure {
+  margin: 14px 0 0;
+  max-width: 440px;
+}
+
+.entry-video {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #000000;
+}
+
+.entry-caption {
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin-top: 7px;
+}
+
 /* Awards and honours, on their own line under the title. The only warm
    colour on the page, kept faint so it reads as highlighter, not a badge. */
 .entry-awards {
@@ -615,6 +703,10 @@ footer {
 
   .greeting {
     font-size: 22px;
+  }
+
+  .entry-work {
+    flex-direction: column;
   }
 }
 
