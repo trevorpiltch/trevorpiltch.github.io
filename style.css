@@ -408,6 +408,28 @@ a:focus-visible {
   margin-bottom: 14px;
 }
 
+/* Awards read like the entries further down: bold name, muted blurb. */
+.awards {
+  list-style: none;
+}
+
+.awards li + li {
+  margin-top: 14px;
+}
+
+.award-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.award-desc {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 62ch;
+  margin-top: 4px;
+}
+
 .pills {
   list-style: none;
   display: flex;
@@ -671,6 +693,118 @@ a:focus-visible {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+/* ---------------------------------------------------------------- practice
+   A week per column, Sunday on top. The columns share the width, so the
+   grid shrinks with the page instead of scrolling sideways on a phone. */
+.cal {
+  display: grid;
+  grid-template-columns: repeat(var(--weeks, 26), 1fr);
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: column;
+  gap: 3px;
+  max-width: 440px;
+  margin-top: 18px;
+}
+
+.cal-day {
+  display: block;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  background: var(--rule);
+}
+
+/* Only days with problems are buttons; the link blue is the page's accent. */
+button.cal-day {
+  cursor: pointer;
+  font: inherit;
+}
+
+.cal-day[data-level="1"] { background: color-mix(in srgb, var(--link) 45%, transparent); }
+.cal-day[data-level="2"] { background: color-mix(in srgb, var(--link) 72%, transparent); }
+.cal-day[data-level="3"] { background: var(--link); }
+
+.cal-day[aria-pressed="true"],
+button.cal-day:focus-visible {
+  outline: 1.5px solid var(--ink);
+  outline-offset: 1px;
+}
+
+.cal-summary {
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-top: 10px;
+}
+
+.cal-list-head {
+  margin-top: 28px;
+}
+
+.prob {
+  border-top: 1px solid var(--rule);
+  padding: 10px 0;
+}
+
+.prob:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.prob summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.prob summary::-webkit-details-marker {
+  display: none;
+}
+
+.prob summary::before {
+  content: "+";
+  width: 10px;
+  color: var(--ink-3);
+}
+
+.prob[open] summary::before {
+  content: "\2212";
+}
+
+.prob-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.prob-body {
+  padding: 8px 0 4px 20px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+.prob-body p + p {
+  margin-top: 6px;
+}
+
+.prob-body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+}
+
+.prob-code {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow-x: auto;
+  line-height: 1.5;
+  color: var(--ink);
 }
 
 /* Footer */
